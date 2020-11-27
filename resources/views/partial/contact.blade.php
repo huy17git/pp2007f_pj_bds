@@ -65,6 +65,8 @@
                     </a>
                     @endforeach
                 </div>
+            <div class="clear"></div>
+                
             </div>
             {{ getMenuSupport()}}
             <div class="clear"></div>
@@ -93,6 +95,7 @@
                 <div class="clear"></div>
         </div>
         {{ getEndFooter()}}
+        <div class="clear"></div>
         
     </div>
 </footer>
