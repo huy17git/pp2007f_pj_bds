@@ -97,3 +97,8 @@ Route::prefix('/admin')->group(function () {
         return view('admin.master');
     });
 });
+
+// admin/menu
+Route::prefix('/admin')->group(function () {
+    Route::get('/category', 'CategoryController@index')->name('categoryIndex');
+});
