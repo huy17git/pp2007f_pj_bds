@@ -441,6 +441,8 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="data-table.html">Edit News</a>
+                                    <a href="data-table.html">Create News</a>
+
                                 </li>
                             </ul>
                         </li>

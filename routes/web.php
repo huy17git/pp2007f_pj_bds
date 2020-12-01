@@ -129,5 +129,14 @@ Route::get('/posts', 'PostController@viewPost')->name('viewPost');
 Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
 Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
 
+    //News-H
+Route::get('/news', 'NewsController@listNews')->name('listNews');
+Route::get('/news/create', 'NewsController@create')->name('createNews');
+Route::post('/news/create', 'NewsController@store')->name('storeNews');
+
+
+
+
+
 
 });
