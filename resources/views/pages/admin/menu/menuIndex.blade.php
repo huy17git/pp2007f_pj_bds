@@ -1,13 +1,13 @@
 @extends('admin.master')
-@section('title', 'Categories')
+@section('title', 'Menu')
 @section('content')
 <div class="page-header">
-    <h2 class="header-title">Post Category Table</h2>
+    <h2 class="header-title">Menu</h2>
     <div class="header-sub-title">
         <nav class="breadcrumb breadcrumb-dash">
-            <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-            <a class="breadcrumb-item" href="{{ route('categoryIndex') }}">Categories</a>
-            <span class="breadcrumb-item active">All Categories</span>
+            <a href="" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
+            <a class="breadcrumb-item" href="{{ route('menuIndex') }}">Menu</a>
+            <span class="breadcrumb-item active">All Menu</span>
         </nav>
     </div>
 </div>
@@ -26,30 +26,34 @@
                                 <label for="selectable1"></label>
                             </div>
                         </th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Unit</th>
-                        <th>Days</th>
+                        <th>Name</th>
+                        <th>Parent_id</th>
+                        <th>Slug</th>
+                        <th>Order</th>
+                        <th>Type</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($categories as $category)
+                    @foreach($menu as $menu)
                     <tr>
                         <td>
                             <div class="checkbox">
-                                <input id="selectable2" type="checkbox">
-                                <label for="selectable2"></label>
+                                <input id="{{ $menu->id }}" type="checkbox" value="{{ $menu->id }}">
+                                <label for="{{ $menu->id }}"></label>
                             </div>
                         </td>
-                        <td>{!! $category->category_name !!}</td>
-                        <td>{!! $category->category_price !!}</td>
-                        <td>{!! $category->category_unit !!}</td>
-                        <td>{!! $category->category_days !!}</td>
+                        <td>
+                            {{$menu->name}}
+                        </td>
+                        <td>{{ $menu->parent_id }}</td>
+                        <td>{{ $menu->slug }}</td>
+                        <td>{{ $menu->order }}</td>
+                        <td>{{ $menu->type }}</td>
                         <td class="text-center font-size-18">
-                            <a href="{{ route('editCategory', $category->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                            <form action="{{ route('deleteCategory', $category->id) }}" method="POST">
-                                <input type="hidden" name="id" value="{!! $category->id !!}">
+                            <a href="{{ route('editMenu', $menu->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                            <form action="{{ route('deleteMenu', $menu->id) }}" method="POST">
+                                <input type="hidden" name="id" value="{!! $menu->id !!}">
                                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                                 <button><i class="ti-trash"></i></button>
                             </form>

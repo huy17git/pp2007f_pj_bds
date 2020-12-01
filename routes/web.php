@@ -139,4 +139,12 @@ Route::post('/news/create', 'NewsController@store')->name('storeNews');
 
 
 
+
+    // admin/menu
+    Route::get('/menu', 'MenuController@index')->name('menuIndex');
+    Route::get('/menu/create', 'MenuController@create')->name('createMenu');
+    Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
+    Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
+    Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
+    Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
 });
