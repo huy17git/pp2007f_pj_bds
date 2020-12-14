@@ -55,6 +55,13 @@ class TinTucController extends Controller
         return view("pages.tintucbds.tintuc", compact('articles'));
     }
 
+    public function searchTinTuc(Request $req) {
+        $articles = Article::where('title','LIKE','%'.$req->timtintuc.'%')->get();
+
+        return view("pages.tintucbds.tintuc", compact('articles'));
+
+    }
+
     
     
 }

@@ -80,6 +80,8 @@ Route::get('/chinh-sach','TinTucController@chinhsach')->name('chinh_sach');
 Route::get('/quy-hoach','TinTucController@quyhoach')->name('quy_hoach');
 Route::get('/bds-the-gioi','TinTucController@bdsthegioi')->name('tintucbds_tg');
 Route::get('/tai-chinh-chung-khoan-bds','TinTucController@taichinhbds')->name('tai_chinh');
+
+Route::get('/tin-tuc-search', 'TinTucController@searchTinTuc')->name('searchTinTuc');
 //Tintucsinglepost
 Route::get('/articles{id}', 'TinTucController@articles')->name('tintuc_single_post');
 

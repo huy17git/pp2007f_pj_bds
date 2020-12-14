@@ -45,29 +45,20 @@
             <div class="site-center">
                 
 
-<input type="hidden" value="3" id="activeTxtSelect" />
+
 <div id="MiddleSubMenu">
     <div class="home-top-search" style="padding-bottom: 10px !important;">
     <div class="home-top-search-keyword">
-        <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword">
+    <form role="search" method="get" id="searchform" action="{{route('searchTinTuc')}}">
+            <input type="text" value="" name="timtintuc" id="searchnews" placeholder="Nhap Tu Khoa..."/>
+            <button type="submit" id="searchsubmit">Tim Kiem<button>
+        </form> 
     </div>
     <div class="advance-select-box" id="home-top-search">
-        <span class="select-text hasvalue">
-            <span class="select-text-content" style="width: 100px;">Hỏi đáp</span>
-        </span>
         <input type="hidden" id="cboTypeSearch" value="4">
     </div>
     <div id="home-top-search-otions" class="advance-select-options advance-options" hddvalue="cboTypeSearch" ddlid="home-top-search" style="">
-        <ul class="advance-options" style="min-width: 125px;">
-            <li vl="1" class="advance-options" style="min-width: 93px;">Nhà đất bán</li>
-            <li vl="2" class="advance-options" style="min-width: 93px;">Nhà đất cho thuê</li>
-            <li vl="3" class="advance-options" style="min-width: 93px;">Tin tức</li>
-            <li vl="5" class="advance-options" style="min-width: 93px;">Dự án</li>
-            <li vl="6" class="advance-options" style="min-width: 93px;">Doanh nghiệp</li>
-            <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
-        </ul>
     </div>
-    <img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="SearchKeyword();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm" name="btnSearch" id="btnSearch">
 </div>
 <div id="gglbody"></div>
 <div class="clear"></div>
@@ -89,6 +80,10 @@
                     <div id="ctl23_ctl00_panelCate" class="detailsView-title-style">
                         <div class="font-title-list-news"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
                     
             
             
@@ -124,13 +119,11 @@
     <div class="margit5">
         <div class="tc-tit-bottom">
                 <div class="ks-pagination-links" align="center" stype="float: right">
-<a pId="1" href="/tin-thi-truong"><div class="style-pager-row-selected">1</div></a>
-<a pId="2" href="/tin-thi-truong/p2"><div class="">2</div></a>
-<a pId="3" href="/tin-thi-truong/p3"><div class="">3</div></a>
-<a pId="4" href="/tin-thi-truong/p4"><div class="">4</div></a>
-<a pId="5" href="/tin-thi-truong/p5"><div class="">5</div></a>
-<a pId="2" href="/tin-thi-truong/p2"><div>...</div></a>
-<a pId="2137" href="/tin-thi-truong/p2137"><div>&gt;</div></a>
+<a pId="1" href="/tin-tuc"><div class="style-pager-row-selected">1</div></a>
+<a pId="2" href="/tin-tuc/p2"><div class="">2</div></a>
+<a pId="3" href="/tin-tuc/p3"><div class="">3</div></a>
+<a pId="4" href="/tin-tuc/p4"><div class="">4</div></a>
+<a pId="5" href="/tin-tuc/p5"><div class="">5</div></a>
 </div>
 
         </div>
@@ -504,7 +497,6 @@
         </div>
 
         <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
-<script type='text/javascript'> var bannerContext={"CateId":88,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":97};</script>
 
         <div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
         <div class="hide" id="domainWeb" data-value="https://batdongsan.com.vn"></div>
@@ -524,116 +516,8 @@
     </div>
     
     
-            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011131001.msvbds.FrontEnd.Common.min.js"></script>
-    
-    <!--start BannerContext-->
-    <script type='text/javascript'> var __bannerContext={"PageId":97,"CateId":88,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
-    <!--end BannerContext-->
-    <!--Start of Zendesk Chat Script-->
-    <script type="text/javascript">
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
-                d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
-                    z.set.
-                        _.push(o)
-                }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
-            $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte"; z.t = +new Date; $.
-                type = "text/javascript"; e.parentNode.insertBefore($, e)
-        })(document, "script");
-    </script>
-    <!--End of Zendesk Chat Script-->
-    <script type="text/javascript">
-            var newsLetterRegister = new newsLetterRegister.NewsLetterRegister();
-            newsLetterRegister.InitializeLoad();
-
-            var commentUser = new commentUser.CommentUser();
-            commentUser.InitializeLoad();
-
-            var paramAccount = {
-                urlListLogin: '/Systems/Account/Login',
-                urlListRegister: '/Systems/Account/Register',
-                urlListForgetPass: '/Systems/Account/ForgetPassword',
-                urlListCity: '/Contacts/CommonData/GetCityList',
-                urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
-                urlListWard: '/Contacts/CommonData/GetWardList',
-            };
-
-            var account = new account.Content();
-            account.Initialize(paramAccount);
-
-            var footer = new footer.Footer();
-            footer.Initialize();
-
-            var menu = new menu.Menu();
-            menu.Initialize();
-    </script>
-
-    <div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
-         unmarked-product-url="/Product/MarkedProducts/UnmarkProduct"
-         marked-product-ids-sync-time="0.5"></div>
-    
-    <script type="text/javascript">
-        try {
-            var script_imported = document.createElement('script');
-            script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&dv=' + (new Date().toJSON().slice(0, 10));
-            if (document.body != null && document.body != undefined) {
-                document.body.appendChild(script_imported);
-            } else {
-                document.head.appendChild(script_imported);
-            }
-        } catch (e) { }
-    </script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var lazyImages = [].slice.call(document.querySelectorAll('[src-lazy]'));
-            window.countOfLazyImages = lazyImages.length;
-            if ('IntersectionObserver' in window) {
-                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            if (lazyImage.attributes['src-lazy']) {
-                                lazyImage.src = lazyImage.attributes['src-lazy'].value;
-                                lazyImage.removeAttribute('src-lazy');
-                                lazyImageObserver.unobserve(lazyImage);
-                            }
-                        };
-                    });
-                });
-                lazyImages.forEach(function (lazyImage, i) {
-                    lazyImage.setAttribute('lazy-id', i);
-                    lazyImageObserver.observe(lazyImage);
-                });
-                (function checkDuplicate() {
-                    var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
-                    if (countOfLazyElements.length > window.countOfLazyImages) {
-                        var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
-                        elements.forEach(element => {
-                            var lazyId = element.attributes['lazy-id'].value;
-                            var lazyElements = [].slice.call(document.querySelectorAll(`[lazy-id="${lazyId}"]`));
-                            if (lazyElements.length > 1) {
-                                for (var i = 1; i < lazyElements.length; i++) {
-                                    var lazyElement = lazyElements[i];
-                                    lazyImageObserver.observe(lazyElement);
-                                    lazyElement.setAttribute('lazy-id', window.countOfLazyImages);
-                                    window.countOfLazyImages++;
-                                }
-                            }
-                        });
-                    }
-                    setTimeout(checkDuplicate, 1000)
-                })();
-            } else {
-                $('[src-lazy]').each(function () {
-                    this.src = this.attributes['src-lazy'].value;
-                    this.removeAttribute('src-lazy');
-                });
-            }
-        });
-    </script>
+           
     
 </body>
 
 @endsection
-
-
