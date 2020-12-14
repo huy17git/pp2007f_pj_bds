@@ -1102,20 +1102,20 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript" async="" src="./assets/js/analytics.js"></script>
-<script type="text/javascript" async="" src="./assets/js/js.js"></script>
-<script type="text/javascript" async="" src="./assets/js/hotjar-1708983.js">
-</script><script type="text/javascript" async="" src="./assets/js/analytics.js"></script>
-<script async="" charset="utf-8" src="./assets/js/a.js" type="text/javascript"></script>
-<script async="" src="./assets/js/gtm.js"></script>
+<script type="text/javascript" async="" src="/assets/js/analytics.js"></script>
+<script type="text/javascript" async="" src="/assets/js/js.js"></script>
+<script type="text/javascript" async="" src="/assets/js/hotjar-1708983.js">
+</script><script type="text/javascript" async="" src="/assets/js/analytics.js"></script>
+<script async="" charset="utf-8" src="/assets/js/a.js" type="text/javascript"></script>
+<script async="" src="/assets/js/gtm.js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({'event': 'pageInfo','cat': 'null','dtk': 'null','ite': '','pag': '86','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
 </script>
 
-<script async="" src="./assets/js/modules.js" charset="utf-8"></script>
+<script async="" src="/assets/js/modules.js" charset="utf-8"></script>
 <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
-<script type="text/javascript" src="./assets/js/w.js"></script>
+<script type="text/javascript" src="/assets/js/w.js"></script>
 <style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.
 { display: none !important }</style>
     

@@ -2,13 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Products extends Model
 {
-    //
+
     use SoftDeletes;
+    protected $fillable = [
+        'title', 'slug'
+    ];
+
     
     public function image()
     {
@@ -32,30 +37,20 @@ class Products extends Model
 
     public function province()
     {
-        return $this->belongsTo(Province::class, 'province_code');
+        return $this->belongsTo(Province::class, 'province_code', 'code');
     }
 
     public function district()
     {
-        return $this->belongsTo(District::class, 'district_code');
+        return $this->belongsTo(District::class, 'district_code', 'code');
     }
 
     public function ward()
     {
-        return $this->belongsTo(Ward::class, 'ward_code');
+        return $this->belongsTo(Ward::class, 'ward_code', 'code');
     }
 
 
-
-
-    protected $fillable = [
-        'title', 'slug'
-    ];
-
-    public function owner()
-    {
-        return $this->belongsTo(User::class);
-    }
 
 
 }

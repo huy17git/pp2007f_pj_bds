@@ -14,7 +14,7 @@ class SlideSeeder extends Seeder
     public function run()
     {
         DB::table('slides')->insert([
-            'link'=>'https://masterisehomes.com/masteri-waterfront/storage/media/y343uyYjCKdaLSrx3GHGEsX2gmlasBhlV5sdNkjG.png',
+            'link'=>'banner1.png',
             'name'=>'masterisehomes',
             'slug'=>'https://masterisehomes.com/masteri-waterfront/?utm_source=Nv_BDShotbanner_MASS_B01V&utm_medium=CPD&utm_campaign=nv_masteri_waterfront#intro',
             'type'=>'banner',
@@ -26,7 +26,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://batdongsan.com.vn/brc/trieu-lua-chon-nha/assets/HP_2.jpg',
+            'link'=>'banner2.jpg',
             'name'=>'citylandparkhills.cityland',
             'slug'=>'https://citylandparkhills.cityland.com.vn/?utm_source=batdongsan&utm_medium=HotBanner&utm_campaign=bannerT11',
             'type'=>'banner',
@@ -38,7 +38,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://masterisehomes.com/masteri-waterfront/storage/media/ui9UF4TqRCahe1QiHGPYpayElRNwYMWcHx3C15U6.jpeg',
+            'link'=>'banner3.jpeg',
             'name'=>'masterisehomes',
             'slug'=>'https://masterisehomes.com/masteri-waterfront/?utm_source=Nv_BDShotbanner_MASS_B01V&utm_medium=CPD&utm_campaign=nv_masteri_waterfront',
             'type'=>'banner',
@@ -50,7 +50,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://vres.batdongsan.com.vn/Content/images/2020/banner_2.jpg',
+            'link'=>'banner4.jpg',
             'name'=>'batdongsan.com',
             'slug'=>'https://citylandparkhills.cityland.com.vn/?utm_source=batdongsan&utm_medium=HotBanner&utm_campaign=bannerT11',
             'type'=>'banner',
@@ -62,7 +62,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://trienlambds.com/wp-content/uploads/2020/11/banner-tlbds-2-1.jpg',
+            'link'=>'banner5.jpg',
             'name'=>'citylandparkhills',
             'slug'=>'https://trienlambds.com/',
             'type'=>'banner',
@@ -74,7 +74,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://file4.batdongsan.com.vn/2020/11/18/UVSXfqBy/20201118171736-2454.jpg',
+            'link'=>'sidebar1.jpg',
             'name'=>'VRES',
             'slug'=>'https://vres.batdongsan.com.vn/?utm_source=BDS&utm_medium=banner&utm_campaign=vres2020',
             'type'=>'sidebar',
@@ -86,7 +86,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://file4.batdongsan.com.vn/2020/11/11/ZBfLmblA/20201111093801-33ac.jpg',
+            'link'=>'sidebar2.jpg',
             'name'=>'AVPE',
             'slug'=>'https://avpe.propertyguru.com.my/?lang=vn',
             'type'=>'sidebar',
@@ -98,7 +98,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://ml7oj4fzi8ge.i.optimole.com/0cch1rI-K5I8D-in/w:auto/h:auto/q:auto/https://bconsplaza.bcons.com.vn/wp-content/uploads/2020/11/1_compressed.jpg',
+            'link'=>'content1.jpg',
             'name'=>'Bcons Plaza',
             'slug'=>'https://bconsplaza.bcons.com.vn/?utm_source=batdongsan&utm_medium=cpc&utm_campaign=bds',
             'type'=>'content',
@@ -110,7 +110,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://file4.batdongsan.com.vn/2020/11/18/UVSXfqBy/20201118171618-1afe.jpg',
+            'link'=>'content2.jpg',
             'name'=>'VRES',
             'slug'=>'https://vres.batdongsan.com.vn/?utm_source=BDS&utm_medium=banner&utm_campaign=vres2020',
             'type'=>'content',

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class District extends Model
 {
     //
+
+    public $primaryKey = 'code';
     public function product()
     {
         return $this->hasMany(Products::class, 'district_code', 'code');

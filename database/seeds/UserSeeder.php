@@ -3,7 +3,10 @@
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Facades\Hash;
+
 class UserSeeder extends Seeder
+
 {
     /**
      * Run the database seeds.
@@ -24,8 +27,8 @@ class UserSeeder extends Seeder
         $faker->addProvider(new Ottaviano\Faker\Gravatar($faker)); 
         $user0 = User::create([
             'username' => 'admin',
-            'email' => 'kviet@gmail.com',
-            'password' => bcrypt('123456'),
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('123456'),
             'fullname' => 'kviet91' ,
             'account' => rand(100,1000)*1000,
             'sex' => rand(0,1),
@@ -38,8 +41,8 @@ class UserSeeder extends Seeder
 
         $user1 = User::create([
             'username' => 'member',
-            'email' => 'kviet1@gmail.com',
-            'password' => bcrypt('123456'),
+            'email' => 'member@gmail.com',
+            'password' => Hash::make('123456'),
             'fullname' => 'kviet91' ,
             'account' => rand(100,1000)*1000,
             'sex' => rand(0,1),

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam')
 @section('style-libraries')
-    <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/box.css">
     <style>
         ul.pagination li {
             display: inline;
@@ -37,7 +37,7 @@
                         <li vl="7" class="advance-options" style="min-width: 92px;">Môi giới</li>
                     </ul>
                 </div>
-                <img src="./assets/image/header-bottom-button.jpg" onclick="SearchKeyword();"
+                <img src="/assets/image/header-bottom-button.jpg" onclick="SearchKeyword();"
                     class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm"
                     name="btnSearch" id="btnSearch">
             </div>
@@ -112,7 +112,7 @@
                             <div class="newsletter-form-small">
                                 <div class="mb5">
                                     <div class="fl">
-                                        <img src="./assets/image/icon-newsletter-small.jpg">
+                                        <img src="/assets/image/icon-newsletter-small.jpg">
                                     </div>
                                     <div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
                                     <div class="clear"></div>
@@ -437,7 +437,7 @@
                                         <input type="image" name="btnSearch" id="btnSearchContext"
                                             onmouseover="this.src = &#39;https://file4.batdongsan.com.vn/images/search2.jpg&#39;"
                                             onmouseout="this.src = &#39;https://file4.batdongsan.com.vn/images/opt/search1.jpg&#39;"
-                                            src="./assets/image/search1.jpg">
+                                            src="/assets/image/search1.jpg">
                                     </div>
                                     <div id="divLabelSearchAdv">
                                         <span class="box-sub-title" id="lblSearch">Tìm nâng cao</span>

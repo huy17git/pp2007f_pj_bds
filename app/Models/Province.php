@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Province extends Model
 {
     //
+    public $primaryKey = 'code';
     protected $fillable = [
         'name',
         'slug',
