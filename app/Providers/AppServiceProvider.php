@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use App\Models\Menu;
+use Illuminate\Support\Facades\Auth;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -15,30 +16,36 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        //
-    }
+    // public function register()
+    // {
+    //     //
+    // }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+    // /**
+    //  * Bootstrap any application services.
+    //  *
+    //  * @return void
+    //  */
     public function boot()
     {
-        $menus0 = Menu::where('type','header_main')->orderby('order')->get()->toArray();
-        $arr_menu = [];
+        if(asset(Menu::all())) 
+        {
+            $menus0 = Menu::where('type','header_main')->orderby('order')->get()->toArray();
+            $arr_menu = [];
         
-        foreach ($menus0 as $menu0) {
-            $arr_menu[$menu0['parent_id']][] = $menu0;
-        }
+            foreach ($menus0 as $menu0) {
+                $arr_menu[$menu0['parent_id']][] = $menu0;
+            }
         // dd($arr_menu);
 
-        view::share('menus0', $menus0);
-        view::share('arr_menu', $arr_menu);
+            view::share('menus0', $menus0);
+            view::share('arr_menu', $arr_menu);
+        }
 
-
+        if(asset(  Auth::user() )) {
+            $user = Auth::user();
+            view::share('user', $user);
+        }
 
     }
 }

@@ -19,6 +19,8 @@ class RoleSeeder extends Seeder
                 'user.create' => true,
                 'user.update' => true,
                 'user.delete' => true,
+                'products.create' => true,
+                'products.update' => true,
             ]
         ]);
         
@@ -26,7 +28,8 @@ class RoleSeeder extends Seeder
             'name' => 'Member', 
             'slug' => 'member',
             'permissions' => [
-                'post.create' => true,
+                'products.create' => true,
+                'products.update' => true,
             ]
         ]);
     }

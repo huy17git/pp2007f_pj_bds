@@ -6,9 +6,9 @@
 @endsection
 
 @section('styles')
-<link rel="stylesheet" href="./assets/css/bien_hoa1.css">
-<link rel="stylesheet" href="./assets/css/bien_hoa2.css">
-<link rel="stylesheet" href="./assets/css/filestatic.ver202011121105.msvbds.FrontEnd.Product.ProductDetails.min.css">
+<link rel="stylesheet" href="/assets/css/bien_hoa1.css">
+<link rel="stylesheet" href="/assets/css/bien_hoa2.css">
+<link rel="stylesheet" href="/assets/css/filestatic.ver202011121105.msvbds.FrontEnd.Product.ProductDetails.min.css">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
 <link rel="next" href="https://batdongsan.com.vn/ban-can-ho-chung-cu/p2">
 <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
@@ -31,7 +31,7 @@
             <input id="Keyword" name="Keyword" type="hidden" value="">
             <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" value="" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
             <span class="icon-close hiding">
-                <img src="./assets/image/ic_close.png">
+                <img src="/assets/image/ic_close.png">
             </span>
         </div>
         <div id="divCategoryRe" class="select-control select-cate">
@@ -87,7 +87,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="price-slider-range slider-range">
                         <input id="txtPriceMinValue" name="MinPrice" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtPriceMaxValue" name="MaxPrice" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="price-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -110,7 +110,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="area-slider-range slider-range">
                         <input id="txtAreaMinValue" name="MinArea" placeholder="Từ" class="min-value" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtAreaMaxValue" name="MaxArea" placeholder="Đến" class="max-value" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="area-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -150,7 +150,7 @@
         </div>
         <div class="select-control filter-control">
             <div class="select-control-label" aria-label="Tìm kiếm nâng cao" data-microtip-position="top" role="tooltip">
-                Lọc thêm<span class="filter-info"><img src="./assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
+                Lọc thêm<span class="filter-info"><img src="/assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
             </div>
             <input type="hidden" id="hdbFilter" value="0">
             <div class="select-filter-dropbox custom-dropbox advance-select-options hiding" style="display: none; height: 516px;">
@@ -239,7 +239,7 @@
 
 
         <input type="button" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
+        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom" role="tooltip"><img src="/assets/image/ic_reset.svg"></div>
     </div>
 </form>
 <script type="text/javascript">
@@ -295,11 +295,11 @@
 </script>
 
         <div class="popupMarking  save" style="display: none">
-            <img src="./assets/image/ic_unsave.svg">
+            <img src="/assets/image/ic_unsave.svg">
             <span> Lưu tin thành công</span>
         </div>
         <div class="popupMarking  unsave" style="display: none">
-            <img src="./assets/image/ic_save.svg">
+            <img src="/assets/image/ic_save.svg">
             <span> Đã bỏ lưu tin</span>
         </div>
 
@@ -339,26 +339,26 @@
                             <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url(&#39;https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg&#39;)">
                             </a>
                             <div class="ioverlay">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="2">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="2">
                             </div>
                         </li>
             </ul>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">3</span></div>
                 <!-- Add Arrows -->
-                <div class="swiper-button-next slide-next1" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/ic_carousel_caret_right.png"> </div>
-                <div class="swiper-button-prev slide-prev1 swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="./assets/image/ic_carousel_caret_left.png"></div>
+                <div class="swiper-button-next slide-next1" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="/assets/image/ic_carousel_caret_right.png"> </div>
+                <div class="swiper-button-prev slide-prev1 swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="/assets/image/ic_carousel_caret_left.png"></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         <div class="swiper-container gallery-thumbs swiper-container-initialized swiper-container-horizontal swiper-container-free-mode swiper-container-thumbs">
             <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                                         <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095750-3277_wm(1).jpg" is-lazy-image="true" lazy-id="3">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="/assets/image/20201111095750-3277_wm(1).jpg" is-lazy-image="true" lazy-id="3">
                         </div>
                         <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="4">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="/assets/image/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="4">
                         </div>
                         <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="5">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="/assets/image/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="5">
                         </div>
             </div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -381,7 +381,7 @@
             </div>
         <div class="content">
             <div class="slide-content slide-3d">
-                <iframe frameborder="0" width="840" height="473" scrolling="no" src="./assets/image/saved_resource(6).html" allowfullscreen=""></iframe>
+                <iframe frameborder="0" width="840" height="473" scrolling="no" src="/assets/image/saved_resource(6).html" allowfullscreen=""></iframe>
             </div>
             <div class="slide-content slide-360 group-img360" id="photo360">
                 <div class="view-full">
@@ -443,13 +443,13 @@
                 <div class="swiper-container gallery-top-full swiper-container-initialized swiper-container-horizontal">
                     <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                         <li class="swiper-slide swiper-slide-active" style="width: 1576px;">
-                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="6">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="6">
                                 </li>
                                 <li class="swiper-slide swiper-slide-next" style="width: 1576px;">
-                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="7">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="7">
                                 </li>
                                 <li class="swiper-slide" style="width: 1576px;">
-                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="8">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="8">
                                 </li>
                     </ul>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -459,13 +459,13 @@
                 <div class="swiper-container gallery-thumbs-full swiper-container-initialized swiper-container-horizontal swiper-container-thumbs" style="max-width: 360px;">
                     <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                         <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="9">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="9">
                                 </div>
                                 <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="10">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="10">
                                 </div>
                                 <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="11">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="/assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="11">
                                 </div>
                     </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -513,13 +513,13 @@
             <div class="box-share hidden">
                 <ul>
                     <li>
-                        <a id="facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072&amp;t=Kh%C3%A1ch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%C3%A1n%20nhanh%20l%C3%B4%20%C4%91%E1%BA%A5t%20Bi%C3%AAn%20H%C3%B2a%20New%20City,%20DT%205%20x%2020m,%206%20x%2020m,%2012%20x%2020m,%20%C4%91%C3%A3%20nh%E1%BA%ADn%20s%E1%BB%95"><img src="./assets/image/ic_facebook.png">Facebook</a>
+                        <a id="facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072&amp;t=Kh%C3%A1ch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%C3%A1n%20nhanh%20l%C3%B4%20%C4%91%E1%BA%A5t%20Bi%C3%AAn%20H%C3%B2a%20New%20City,%20DT%205%20x%2020m,%206%20x%2020m,%2012%20x%2020m,%20%C4%91%C3%A3%20nh%E1%BA%ADn%20s%E1%BB%95"><img src="/assets/image/ic_facebook.png">Facebook</a>
                     </li>
                     <li>
-                        <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize="true"><img src="./assets/image/ic_zalo.png">Zalo<iframe frameborder="0" allowfullscreen="" scrolling="no" width="0px" height="0px" src="./assets/image/share.html" style="position: absolute;"></iframe></div>
+                        <div class="zalo-share-button" data-href="" data-oaid="579745863508352884" data-layout="2" data-color="blue" data-customize="true"><img src="/assets/image/ic_zalo.png">Zalo<iframe frameborder="0" allowfullscreen="" scrolling="no" width="0px" height="0px" src="/assets/image/share.html" style="position: absolute;"></iframe></div>
                     </li>
                     <li>
-                        <a id="copyLink"><img src="./assets/image/ic_link.png">Sao chép liên kết</a>
+                        <a id="copyLink"><img src="/assets/image/ic_link.png">Sao chép liên kết</a>
                     </li>
                 </ul>
             </div>
@@ -536,10 +536,10 @@
             </div>
             <div class="box-view-more hidden">
                 <div class="gradient">&nbsp;</div>
-                <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
             </div>
             <div class="box-view-less hidden" style="display: block;">
-                <div class="view-less">Thu gọn<img src="./assets/image/ic_caret_up.svg"></div>
+                <div class="view-less">Thu gọn<img src="/assets/image/ic_caret_up.svg"></div>
             </div>
         </div>
         <div class="detail-2 pad-16">
@@ -567,7 +567,7 @@
                 <div class="detail-2 pad-16">
             <span class="title-detail">Xem trên bản đồ</span>
             <div class="map">
-                <iframe width="100%" height="246px" ignore-lazy-loading="" frameborder="0" style="border:0" src="./assets/image/place.html" allowfullscreen=""></iframe>
+                <iframe width="100%" height="246px" ignore-lazy-loading="" frameborder="0" style="border:0" src="/assets/image/place.html" allowfullscreen=""></iframe>
                 <div class="map-overlay"></div>
             </div>
         </div>
@@ -668,7 +668,7 @@
         <div class="btn-green fb-popup">
             <span class="fb-popup">
                 <span class="fb-popup">
-                    <div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="./assets/image/anchor.html" width="256" height="60" role="presentation" name="a-dden5yvkd606" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><button class="btn-sendfeedback fb-popup g-recaptcha" rel="nofollow" href="javascript:void(0)" data-sitekey="6Lf-hbgZAAAAAGWhpwOnaSnHeERaH7lqJ065rGM4" data-callback="onSubmit_FrontEnd_Product_Details_DetailsBinnova_SendFeedback" data-action="submit">
+                    <div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="/assets/image/anchor.html" width="256" height="60" role="presentation" name="a-dden5yvkd606" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><button class="btn-sendfeedback fb-popup g-recaptcha" rel="nofollow" href="javascript:void(0)" data-sitekey="6Lf-hbgZAAAAAGWhpwOnaSnHeERaH7lqJ065rGM4" data-callback="onSubmit_FrontEnd_Product_Details_DetailsBinnova_SendFeedback" data-action="submit">
                         Gửi
                     </button>
                 </span>
@@ -712,7 +712,7 @@
         </div>
 
         <div class="row text-center">
-            <div><div class="grecaptcha-badge" data-style="none" style="width: 256px; height: 60px; position: fixed; visibility: hidden;"><div class="grecaptcha-logo"><iframe src="./assets/image/anchor(1).html" width="256" height="60" role="presentation" name="a-3u4gfsgp33hz" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./assets/image/saved_resource(7).html"></iframe></div><button class="g-recaptcha" data-sitekey="6Lf-hbgZAAAAAGWhpwOnaSnHeERaH7lqJ065rGM4" data-callback="onSubmit_FrontEnd_Product_Details_ContactBox_SendRequest" data-action="submit" onmouseover="this.style.cursor=&#39;pointer&#39;" id="btnSendRequest">Gửi yêu cầu</button>
+            <div><div class="grecaptcha-badge" data-style="none" style="width: 256px; height: 60px; position: fixed; visibility: hidden;"><div class="grecaptcha-logo"><iframe src="/assets/image/anchor(1).html" width="256" height="60" role="presentation" name="a-3u4gfsgp33hz" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="/assets/image/saved_resource(7).html"></iframe></div><button class="g-recaptcha" data-sitekey="6Lf-hbgZAAAAAGWhpwOnaSnHeERaH7lqJ065rGM4" data-callback="onSubmit_FrontEnd_Product_Details_ContactBox_SendRequest" data-action="submit" onmouseover="this.style.cursor=&#39;pointer&#39;" id="btnSendRequest">Gửi yêu cầu</button>
         </div>
     </div>
 </div>
@@ -772,8 +772,8 @@
 
                 </ul>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-            <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/slide-next.png"></div>
-            <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="./assets/image/slide-prev.png"></div>
+            <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="/assets/image/slide-next.png"></div>
+            <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="/assets/image/slide-prev.png"></div>
         </div>
     </div>
 <script type="text/javascript">
@@ -818,8 +818,8 @@
                 @endforeach   
                </ul>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/slide-next.png"></div>
-        <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="./assets/image/slide-prev.png"></div>
+        <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="/assets/image/slide-next.png"></div>
+        <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="/assets/image/slide-prev.png"></div>
     </div>
 </div>
 <script type="text/javascript">
@@ -1145,7 +1145,7 @@
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-928px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">
-                                                                            <img src="./assets/image/20190531173625-b770.jpg">
+                                                                            <img src="/assets/image/20190531173625-b770.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1155,7 +1155,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">
-                                                                            <img src="./assets/image/20180104105026-5581.jpg">
+                                                                            <img src="/assets/image/20180104105026-5581.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1165,7 +1165,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">
-                                                                            <img src="./assets/image/20170825163101-f2fb.jpg">
+                                                                            <img src="/assets/image/20170825163101-f2fb.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1175,7 +1175,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">
-                                                                            <img src="./assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
+                                                                            <img src="/assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1186,7 +1186,7 @@
                         <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">
-                                                                            <img src="./assets/image/20180817111042-29df.jpg">
+                                                                            <img src="/assets/image/20180817111042-29df.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1196,7 +1196,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">
-                                                                            <img src="./assets/image/20180618174008-4ee6.jpg">
+                                                                            <img src="/assets/image/20180618174008-4ee6.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1206,7 +1206,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">
-                                                                            <img src="./assets/image/20180510151049-8b4b.jpg">
+                                                                            <img src="/assets/image/20180510151049-8b4b.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1216,7 +1216,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">
-                                                                            <img src="./assets/image/20180510142917-d740.jpg">
+                                                                            <img src="/assets/image/20180510142917-d740.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1230,7 +1230,7 @@
                         <div class="swiper-slide" data-swiper-slide-index="1" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohudona-eb2510" rel="nofollow">
-                                                                            <img src="./assets/image/20180510141326-909b.jpg">
+                                                                            <img src="/assets/image/20180510141326-909b.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1240,7 +1240,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuhousing-eb2509" rel="nofollow">
-                                                                            <img src="./assets/image/20180510141042-e71d.jpg">
+                                                                            <img src="/assets/image/20180510141042-e71d.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1250,7 +1250,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuhcm-eb2508" rel="nofollow">
-                                                                            <img src="./assets/image/20180510140751-1857.jpg">
+                                                                            <img src="/assets/image/20180510140751-1857.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1260,7 +1260,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohumiennam-eb2507" rel="nofollow">
-                                                                            <img src="./assets/image/20180510140422-59d2.jpg">
+                                                                            <img src="/assets/image/20180510140422-59d2.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1274,7 +1274,7 @@
                         <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohumiendong-eb2506" rel="nofollow">
-                                                                            <img src="./assets/image/20180510120438-a0e5.jpg">
+                                                                            <img src="/assets/image/20180510120438-a0e5.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1284,7 +1284,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohureal-eb2505" rel="nofollow">
-                                                                            <img src="./assets/image/20180510113359-da64.jpg">
+                                                                            <img src="/assets/image/20180510113359-da64.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1294,7 +1294,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuland-eb1100" rel="nofollow">
-                                                                            <img src="./assets/image/20180510143557-2bfd.jpg">
+                                                                            <img src="/assets/image/20180510143557-2bfd.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1304,7 +1304,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2762" rel="nofollow">
-                                                                            <img src="./assets/image/20191207111310-b5e7.jpg">
+                                                                            <img src="/assets/image/20191207111310-b5e7.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1318,7 +1318,7 @@
                         <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/c-ty-tnhh-xay-dung-thuong-mai-moi-gioi-bat-dong-san-dat-viet-eb2712" rel="nofollow">
-                                                                            <img src="./assets/image/20190531173625-b770.jpg">
+                                                                            <img src="/assets/image/20190531173625-b770.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1328,7 +1328,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-co-phan-dv-tm-xd-dia-oc-kim-oanh-eb2466" rel="nofollow">
-                                                                            <img src="./assets/image/20180104105026-5581.jpg">
+                                                                            <img src="/assets/image/20180104105026-5581.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1338,7 +1338,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-co-phan-dau-tu-viet-hung-phat-eb2420" rel="nofollow">
-                                                                            <img src="./assets/image/20170825163101-f2fb.jpg">
+                                                                            <img src="/assets/image/20170825163101-f2fb.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1348,7 +1348,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-tnhh-dich-vu-bat-dong-san-dong-a-eb946" rel="nofollow">
-                                                                            <img src="./assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
+                                                                            <img src="/assets/image/thumb200x200.2306.cong-ty-tnhh-dich-vu-bat-dong-san-dong-a.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1362,7 +1362,7 @@
                 <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 232px;"><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/cong-ty-cp-kinh-doanh-dia-oc-dat-moi-eb2588" rel="nofollow">
-                                                                            <img src="./assets/image/20180817111042-29df.jpg">
+                                                                            <img src="/assets/image/20180817111042-29df.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1372,7 +1372,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/vpdd-cong-ty-cppt-dia-oc-van-xuan-eb2538" rel="nofollow">
-                                                                            <img src="./assets/image/20180618174008-4ee6.jpg">
+                                                                            <img src="/assets/image/20180618174008-4ee6.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1382,7 +1382,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuhappyland-eb2512" rel="nofollow">
-                                                                            <img src="./assets/image/20180510151049-8b4b.jpg">
+                                                                            <img src="/assets/image/20180510151049-8b4b.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">
@@ -1392,7 +1392,7 @@
                         </div><div class="broker-wrap">
                             <div class="broker-avatar">
                                 <a href="https://batdongsan.com.vn/san-giao-dich-dohuinternational-eb2511" rel="nofollow">
-                                                                            <img src="./assets/image/20180510142917-d740.jpg">
+                                                                            <img src="/assets/image/20180510142917-d740.jpg">
                                 </a>
                             </div>
                             <div class="broker-info">

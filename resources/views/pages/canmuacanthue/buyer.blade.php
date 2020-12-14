@@ -28,7 +28,7 @@
                         <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
                     </ul>
                 </div>
-                <img src="./assets/image/header-bottom-button.jpg"
+                <img src="/assets/image/header-bottom-button.jpg"
                     onclick="SearchKeyword();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all"
                     alt="Tìm kiếm" name="btnSearch" id="btnSearch">
             </div>
@@ -78,7 +78,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-nha-mat-pho-binh-thanh/can-tim-mua-nha-chinh-chu-gia-tot-tai-cac-quan-tp-hcm-ad105920">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần tìm mua nhà chính chủ giá tốt tại các quận TP HCM">
                                             </a>
                                         </div>
@@ -117,7 +117,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-ben-cat-bd/can-mua-dat-lam-nha-xuong-dien-tich-5ha-den-10ha-ad105984">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua đất làm nhà xưởng diện tích 5ha đến 10ha ">
                                             </a>
                                         </div>
@@ -154,7 +154,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-nen-du-an-green-city/khach-ha-noi-can-tim-hang-gia-tot-du-an-green-city-va-seaview-dau-tu-ad104242">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201013134209-a3f8.jpg"
+                                                    src="/assets/image/20201013134209-a3f8.jpg"
                                                     alt="Khách Hà Nội cần tìm hàng gía tốt dự án Green City và Seaview đầu tư">
                                             </a>
                                         </div>
@@ -192,7 +192,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-quan-2/khach-can-mua-can-ho-gan-cau-sai-gon-2pn-co-so-de-vay-ad106008">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/no-photo1.jpg"
+                                                    src="/assets/image/no-photo1.jpg"
                                                     alt="Khách cần mua căn hộ gần Cầu Sài Gòn, 2pn có sổ, để vay">
                                             </a>
                                         </div>
@@ -227,7 +227,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-thi-tran-hiep-phuoc/can-nguon-dat-chinh-chu-o-nhon-trach-ad106007">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201115095630-0a93_wm.jpg"
+                                                    src="/assets/image/20201115095630-0a93_wm.jpg"
                                                     alt="Cần nguồn đất chính chủ ở Nhơn Trạch">
                                             </a>
                                         </div>
@@ -264,7 +264,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-nen-du-an-khu-do-thi-my-phuoc-3/do-co-luong-tien-nhan-roi-nen-toi-hien-dang-rat-quan-tam-mua-dat-my-phuoc-3-binh-duong-de-dau-tu-ad105999">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201114135841-ca5d_wm.jpg"
+                                                    src="/assets/image/20201114135841-ca5d_wm.jpg"
                                                     alt="Do có lượng tiền nhàn rỗi nên tôi hiện đang rất quan tâm mua đất Mỹ Phước 3 Bình Dương để đầu tư ">
                                             </a>
                                         </div>
@@ -302,7 +302,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-the-manor-tp-ho-chi-minh/can-mua-can-ho-the-manor-nguyen-huu-canh-ad105996">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua căn hộ The Manor, Nguyễn Hữu Cảnh">
                                             </a>
                                         </div>
@@ -337,7 +337,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-nen-du-an-khu-do-thi-manh-hung/can-mua-lo-dat-giai-doan-2-manh-hung-ha-nam-nhu-cau-xay-nha-de-o-ad105995">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201114105328-aa95_wm.jpg"
+                                                    src="/assets/image/20201114105328-aa95_wm.jpg"
                                                     alt="Cần mua lô đất giai đoạn 2 Mạnh Hùng Hà Nam. Nhu cầu xây nhà để ở">
                                             </a>
                                         </div>
@@ -373,7 +373,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-xa-tien-xuan/can-mua-dat-lam-nha-vuon-khu-vuc-tien-xuan-yen-binh-ad105989">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201114092600-5748_wm.jpeg"
+                                                    src="/assets/image/20201114092600-5748_wm.jpeg"
                                                     alt="Cần mua đất làm nhà vườn khu vực Tiến Xuân, Yên Bình">
                                             </a>
                                         </div>
@@ -409,7 +409,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-imperial-plaza/toi-can-mua-can-ho-chung-cu-tai-360-giai-phong-ad106009">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Tôi cần mua căn hộ chung cư tại 360 Giải Phóng">
                                             </a>
                                         </div>
@@ -446,7 +446,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-khu-do-thi-trung-hoa-nhan-chinh/can-mua-nha-tai-chung-cu-24t2-hoang-dao-thuy-ad106028">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua nhà tại chung cư 24T2 Hoàng Đạo Thúy">
                                             </a>
                                         </div>
@@ -482,7 +482,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-ha-dong/can-mua-khoang-150-200m2-dat-lam-nha-xuong-ad105975">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua khoảng 150 - 200m2 đất làm nhà xưởng">
                                             </a>
                                         </div>
@@ -518,7 +518,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-phuong-long-bien/can-mua-chcc-gan-duong-co-linh-uu-tien-huong-dong-nam-moi-ban-giao-noi-that-co-ban-ad105973">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua CHCC gần đường Cổ Linh, ưu tiên hướng Đông Nam, mới bàn giao, nội thất cơ bản">
                                             </a>
                                         </div>
@@ -556,7 +556,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-nha-rieng-phuong-13-10/can-mua-nha-de-o-kh-bau-cat-tan-binh-ad105944">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua nhà để ở KH Bàu Cát, Tân Bình">
                                             </a>
                                         </div>
@@ -592,7 +592,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-phuong-nhat-tan-2/can-mua-chung-cu-view-ho-tay-1-8-ty-do-lai-ad105967">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua chung cư view Hồ Tây 1,8 tỷ đổ lại">
                                             </a>
                                         </div>
@@ -628,7 +628,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-bac-ninh-bn/can-mua-dat-luong-tai-gia-binh-bac-ninh-0986287189-ad105964">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua đất Lương Tài, Gia Bình, Bắc Ninh, 0986287189">
                                             </a>
                                         </div>
@@ -665,7 +665,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-can-ho-chung-cu-luxgarden/can-mua-can-ho-lux-garden-tu-2-3pn-lau-cao-ad105950">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua căn hộ Lux Garden từ 2-3pn lầu cao">
                                             </a>
                                         </div>
@@ -701,7 +701,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-nen-du-an-bac-lieu-bl/mua-dat-khu-dan-cu-va-khu-do-thi-noi-o-thanh-pho-bac-lieu-tinh-bac-lieu-co-phap-ly-ro-rang-ad105931">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Mua đất khu dân cư và khu đô thị nội ô thành phố Bạc Liêu, Tỉnh Bạc Liêu có pháp lý rõ ràng">
                                             </a>
                                         </div>
@@ -736,7 +736,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-nha-rieng-phuong-hiep-binh-chanh/can-mua-nha-thu-duc-can-mua-nha-nat-ad105927">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần mua nhà Thủ Đức cần mua nhà nát">
                                             </a>
                                         </div>
@@ -772,7 +772,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/mua-nha-mat-pho-phuong-trung-hoa-4/thue-mha-mat-tien-rong-thoang-kinh-doanh-duoc-co-chieu-rong-tu-5-7-met-ad105926">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/nophoto-175x116.jpg"
+                                                    src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Thuê mhà mặt tiền rộng thoáng kinh doanh được có chiều rộng từ 5-7 mét">
                                             </a>
                                         </div>
@@ -857,7 +857,7 @@
                                 <div class="mb5">
                                     <div class="fl">
                                         <img
-                                            src="./assets/image/icon-newsletter-small.jpg">
+                                            src="/assets/image/icon-newsletter-small.jpg">
                                     </div>
                                     <div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
                                     <div class="clear"></div>
@@ -1205,7 +1205,7 @@
                                         <input type="image" name="btnSearch" id="btnSearchContext"
                                             onmouseover="this.src = &#39;https://file4.batdongsan.com.vn/images/search2.jpg&#39;"
                                             onmouseout="this.src = &#39;https://file4.batdongsan.com.vn/images/opt/search1.jpg&#39;"
-                                            src="./assets/image/search1.jpg">
+                                            src="/assets/image/search1.jpg">
                                     </div>
                                     <div id="divLabelSearchAdv">
                                         <span class="box-sub-title" id="lblSearch">Tìm nâng cao</span>
@@ -1228,21 +1228,21 @@
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-huong-nha">
                                     <img alt="Tư vấn phong thủy"
-                                        src="./assets/image/icon-phongthuy.png">Tư
+                                        src="/assets/image/icon-phongthuy.png">Tư
                                     vấn phong thủy
                                 </a>
                             </li>
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-du-toan-chi-tiet">
                                     <img alt="Tính lãi suất"
-                                        src="./assets/image/icon-chiphi.png">Dự
+                                        src="/assets/image/icon-chiphi.png">Dự
                                     tính chi phí làm nhà
                                 </a>
                             </li>
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-tinh-lai-suat">
                                     <img alt="Tính lãi suất"
-                                        src="./assets/image/icon-laisuat.png">Tính
+                                        src="/assets/image/icon-laisuat.png">Tính
                                     lãi suất
                                 </a>
                             </li>
@@ -1297,7 +1297,7 @@
                             width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin"
                             title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true"
                             allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                            src="./assets/image/page.html"
+                            src="/assets/image/page.html"
                             style="border: none; visibility: visible; width: 240px; height: 130px;"
                             class=""></iframe></span></div>
             </div>
@@ -1422,7 +1422,7 @@
                                 clr="false" k=""><a
                                     href="https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11107"
                                     target="_blank" title="" rel="nofollow"><img
-                                        src="./assets/image/20201112094854-071c.jpg"
+                                        src="/assets/image/20201112094854-071c.jpg"
                                         style="max-width: 100%; height:600px;"></a></div>
                         </div>
                     </div>

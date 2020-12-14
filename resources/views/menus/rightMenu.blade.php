@@ -13,7 +13,7 @@
             <div class="box-view-more ">
             <a href="javascript:void(0);" class="box-product-right-viewmore">
                 <div class="gradient">&nbsp;</div>
-                <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
             </a>
         </div>
         </ul>

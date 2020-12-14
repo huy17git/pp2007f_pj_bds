@@ -2,12 +2,12 @@
 @section('title', 'Nhà đất cần thuê - Cho thuê nhà, căn hộ, văn phòng giá cạnh tranh | Batdongsan.com.vn')
 @section('style-libraries')
     
-    <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.FrontEnd.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/filestatic.msvbds.FrontEnd.min.css">
 @endsection
 @section('content')
     <div class="site-center">
 
-        <link rel="stylesheet" type="text/css" href="./assets/image/box.css">
+        <link rel="stylesheet" type="text/css" href="/assets/image/box.css">
         <input type="hidden" value="1" id="activeTxtSelect">
         <div id="MiddleSubMenu">
             <div class="home-top-search" style="padding-bottom: 10px !important;">
@@ -31,7 +31,7 @@
                         <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
                     </ul>
                 </div>
-                <img src="./assets/image/header-bottom-button.jpg" onclick="SearchKeyword();"
+                <img src="/assets/image/header-bottom-button.jpg" onclick="SearchKeyword();"
                     class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm"
                     name="btnSearch" id="btnSearch">
             </div>
@@ -81,7 +81,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-quan-1/vietcombank-can-thue-nhieu-nha-vi-tri-tot-de-lam-van-phong-giao-dich-tai-tp-hcm-ad105952">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112140943-16ef_wm.jpg"
+                                                    src="/assets/image/20201112140943-16ef_wm.jpg"
                                                     alt="Vietcombank cần thuê nhiều nhà vị trí tốt để làm văn phòng giao dịch tại TP.HCM">
                                             </a>
                                         </div>
@@ -120,7 +120,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-quan-1/thay-doi-vi-tri-can-thue-nha-mat-tien-tren-8m-lam-ngan-hang-bidv-tai-tp-hcm-ad105951">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112140649-6840_wm.jpg"
+                                                    src="/assets/image/20201112140649-6840_wm.jpg"
                                                     alt="Thay đổi vị trí cần thuê nhà mặt tiền trên 8m làm ngân hàng BIDV tại TP.HCM">
                                             </a>
                                         </div>
@@ -159,7 +159,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-quan-10/can-thue-nha-nguyen-can-mat-tien-mo-ngan-hang-agribank-tai-tp-hcm-ad105949">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112140450-3bbf_wm.jpg"
+                                                    src="/assets/image/20201112140450-3bbf_wm.jpg"
                                                     alt="Cần thuê nhà nguyên căn mặt tiền mở ngân hàng Agribank tại TP.HCM">
                                             </a>
                                         </div>
@@ -198,7 +198,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-binh-thanh/3-oclock-can-thue-mat-bang-voi-dien-tich-lon-mo-cafe-tai-tp-hcm-ad105948">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112140429-d805_wm.jpg"
+                                                    src="/assets/image/20201112140429-d805_wm.jpg"
                                                     alt="3 O&#39;Clock cần thuê mặt bằng với diện tích lớn mở Cafe Tại Tp.HCM">
                                             </a>
                                         </div>
@@ -237,7 +237,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-phu-nhuan/can-thue-nha-2mt-de-mo-chuoi-cua-hang-ga-ran-kfc-ad105930">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112122217-6b8f_wm.jpg"
+                                                    src="/assets/image/20201112122217-6b8f_wm.jpg"
                                                     alt="Cần thuê nhà 2MT để mở chuỗi cửa hàng gà rán KFC">
                                             </a>
                                         </div>
@@ -276,7 +276,7 @@
                                         <div class="p-main-image-crop">
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-rieng-ha-dong/can-thue-nha-nguyen-can-lam-cty-duoc-khu-vuc-hoang-mai-ha-dong-huong-tay-tay-bac-dong-bac-ad105929">
-                                                <img class="product-avatar-img" src="./assets/image/nophoto-175x116.jpg"
+                                                <img class="product-avatar-img" src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần thuê nhà nguyên căn làm cty dược, khu vực Hoàng Mai, Hà Đông, hướng Tây, Tây Bắc, Đông Bắc">
                                             </a>
                                         </div>
@@ -312,7 +312,7 @@
                                         <div class="p-main-image-crop">
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-cua-hang-ki-ot-song-cau-py/can-thue-mat-bang-kinh-doanh-tai-trung-tam-thi-xa-song-cau-phu-yen-ad105928">
-                                                <img class="product-avatar-img" src="./assets/image/nophoto-175x116.jpg"
+                                                <img class="product-avatar-img" src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần thuê mặt bằng kinh doanh tại trung tâm thị xã Sông Cầu, Phú Yên">
                                             </a>
                                         </div>
@@ -346,7 +346,7 @@
                                         <div class="p-main-image-crop">
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-kho-nha-xuong-dat-dong-anh/can-thue-dat-lam-truong-hoc-tai-dong-anh-lam-tieu-hoc-ad105922">
-                                                <img class="product-avatar-img" src="./assets/image/nophoto-175x116.jpg"
+                                                <img class="product-avatar-img" src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần thuê đất làm trường học tại Đông Anh làm tiểu học">
                                             </a>
                                         </div>
@@ -383,7 +383,7 @@
                                         <div class="p-main-image-crop">
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-can-ho-chung-cu-cau-giay/can-thue-chung-cu-khu-vuc-cau-giay-truong-chinh-ad105921">
-                                                <img class="product-avatar-img" src="./assets/image/nophoto-175x116.jpg"
+                                                <img class="product-avatar-img" src="/assets/image/nophoto-175x116.jpg"
                                                     alt="Cần thuê chung cư khu vực Cầu Giấy/Trường Chinh">
                                             </a>
                                         </div>
@@ -421,7 +421,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-cua-hang-ki-ot-duong-duy-tan-7/can-thue-mat-bang-lam-cafe-khu-vuc-dong-van-phong-sinh-vien-ad105918">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201112082124-9899_wm.jpg"
+                                                    src="/assets/image/20201112082124-9899_wm.jpg"
                                                     alt="Cần thuê mặt bằng làm cafe khu vực đông văn phòng, sinh viên">
                                             </a>
                                         </div>
@@ -458,7 +458,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-binh-thanh/can-thue-nha-mat-tien-lam-showroom-ad105889">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200903202409-2ee9_wm.jpg"
+                                                    src="/assets/image/20200903202409-2ee9_wm.jpg"
                                                     alt="Cần thuê nhà mặt tiền làm showroom">
                                             </a>
                                         </div>
@@ -497,7 +497,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-go-vap/ngan-hang-techcombank-can-thue-nha-mt-cac-tuyen-duong-lon-de-mo-phong-giao-dich-ad105885">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200908094654-3022_wm.jpg"
+                                                    src="/assets/image/20200908094654-3022_wm.jpg"
                                                     alt="Ngân hàng Techcombank cần thuê nhà MT các tuyến đường lớn để mở phòng giao dịch">
                                             </a>
                                         </div>
@@ -536,7 +536,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-binh-tan/nha-hang-kieu-nhat-manmaru-can-thue-nha-tai-trung-tam-tphcm-ad105884">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200908094748-cea5_wm.jpg"
+                                                    src="/assets/image/20200908094748-cea5_wm.jpg"
                                                     alt="Nhà hàng kiểu Nhật Manmaru cần thuê nhà tại trung tâm TPHCM">
                                             </a>
                                         </div>
@@ -575,7 +575,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-phu-nhuan/thuong-hieu-my-pham-han-quoc-innisfree-can-thue-nha-mat-tien-lam-showroom-ad105883">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200908095047-f4b7_wm.jpg"
+                                                    src="/assets/image/20200908095047-f4b7_wm.jpg"
                                                     alt="Thương hiệu mỹ phẩm Hàn Quốc Innisfree cần thuê nhà mặt tiền làm showroom">
                                             </a>
                                         </div>
@@ -614,7 +614,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-phu-nhuan/can-thue-nha-2mt-de-mo-chuoi-cua-hang-ga-ran-kfc-ad105882">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200908095159-9d16_wm.jpg"
+                                                    src="/assets/image/20200908095159-9d16_wm.jpg"
                                                     alt="Cần thuê nhà 2MT để mở chuỗi cửa hàng gà rán KFC">
                                             </a>
                                         </div>
@@ -654,7 +654,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-quan-1/hoc-vien-toc-quoc-te-thao-tay-can-thue-nha-nguyen-can-mat-tien-cac-quan-trung-tam-tp-ho-chi-minh-ad105881">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20200909201926-62e4_wm.jpg"
+                                                    src="/assets/image/20200909201926-62e4_wm.jpg"
                                                     alt="Học viện tóc quốc tế Thảo Tây cần thuê nhà nguyên căn mặt tiền các quận trung tâm TP. Hồ Chí Minh">
                                             </a>
                                         </div>
@@ -693,7 +693,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-kho-nha-xuong-dat-phuong-13-10/nhu-cau-thue-dat-phat-trien-chuoi-vuon-uom-khoi-nghiep-sang-tao-diyas-sky-ad105907">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201111202529-2edf_wm.jpg"
+                                                    src="/assets/image/20201111202529-2edf_wm.jpg"
                                                     alt="Nhu cầu thuê đất phát triển chuỗi vườn ươm khởi nghiệp sáng tạo - Diyas Sky">
                                             </a>
                                         </div>
@@ -731,7 +731,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-phu-nhuan/giam-doc-ngan-hang-maritime-bank-can-thue-mat-bang-tai-trung-tam-tp-hcm-ad105906">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201002165724-3c34_wm.jpg"
+                                                    src="/assets/image/20201002165724-3c34_wm.jpg"
                                                     alt="Giám đốc Ngân hàng Maritime Bank cần thuê mặt bằng tại trung tâm Tp.HCM">
                                             </a>
                                         </div>
@@ -770,7 +770,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-hoc-mon/nha-cho-thue-de-lam-truong-hoc-anh-ngu-vus-can-co-nhung-tieu-chi-nhu-sau-ad105904">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201007103357-eade_wm.jpg"
+                                                    src="/assets/image/20201007103357-eade_wm.jpg"
                                                     alt="Nhà cho thuê để làm trường học Anh Ngữ VUS cần có những tiêu chí như sau">
                                             </a>
                                         </div>
@@ -810,7 +810,7 @@
                                             <a
                                                 href="https://batdongsan.com.vn/can-thue-nha-mat-pho-binh-thanh/can-thue-mat-bang-cho-chuoi-thuong-hieu-ivy-moda-ad105903">
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201007103514-6633_wm.jpg"
+                                                    src="/assets/image/20201007103514-6633_wm.jpg"
                                                     alt="Cần thuê mặt bằng cho chuỗi thương hiệu IVY Moda">
                                             </a>
                                         </div>
@@ -898,7 +898,7 @@
                             <div class="newsletter-form-small">
                                 <div class="mb5">
                                     <div class="fl">
-                                        <img src="./assets/image/icon-newsletter-small.jpg">
+                                        <img src="/assets/image/icon-newsletter-small.jpg">
                                     </div>
                                     <div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
                                     <div class="clear"></div>
@@ -1240,7 +1240,7 @@
                                         <input type="image" name="btnSearch" id="btnSearchContext"
                                             onmouseover="this.src = &#39;https://file4.batdongsan.com.vn/images/search2.jpg&#39;"
                                             onmouseout="this.src = &#39;https://file4.batdongsan.com.vn/images/opt/search1.jpg&#39;"
-                                            src="./assets/image/search1.jpg">
+                                            src="/assets/image/search1.jpg">
                                     </div>
                                     <div id="divLabelSearchAdv">
                                         <span class="box-sub-title" id="lblSearch">Tìm nâng cao</span>
@@ -1262,17 +1262,17 @@
                         <ul>
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-xem-huong-nha">
-                                    <img alt="Tư vấn phong thủy" src="./assets/image/icon-phongthuy.png">Tư vấn phong thủy
+                                    <img alt="Tư vấn phong thủy" src="/assets/image/icon-phongthuy.png">Tư vấn phong thủy
                                 </a>
                             </li>
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-du-toan-chi-tiet">
-                                    <img alt="Tính lãi suất" src="./assets/image/icon-chiphi.png">Dự tính chi phí làm nhà
+                                    <img alt="Tính lãi suất" src="/assets/image/icon-chiphi.png">Dự tính chi phí làm nhà
                                 </a>
                             </li>
                             <li>
                                 <a href="https://batdongsan.com.vn/ho-tro-tien-ich/ht-tinh-lai-suat">
-                                    <img alt="Tính lãi suất" src="./assets/image/icon-laisuat.png">Tính lãi suất
+                                    <img alt="Tính lãi suất" src="/assets/image/icon-laisuat.png">Tính lãi suất
                                 </a>
                             </li>
                         </ul>
@@ -1326,7 +1326,7 @@
                     <span style="vertical-align: bottom; width: 240px; height: 130px;"><iframe name="fad5e529d364"
                             width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin"
                             title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true"
-                            allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./assets/image/page.html"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media" src="/assets/image/page.html"
                             style="border: none; visibility: visible; width: 240px; height: 130px;"
                             class=""></iframe></span></div>
             </div>
@@ -1451,7 +1451,7 @@
                                 clr="false" k=""><a
                                     href="https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11107"
                                     target="_blank" title="" rel="nofollow"><img
-                                        src="./assets/image/20201112094854-071c.jpg"
+                                        src="/assets/image/20201112094854-071c.jpg"
                                         style="max-width: 100%; height:600px;"></a></div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 
 class TinTucController extends Controller
@@ -51,10 +52,16 @@ class TinTucController extends Controller
     }
 
     public function index() {
-        $articles = DB::table('articles')->limit(6)->get();
+        $articles = DB::table('articles')->simplePaginate(20);
         return view("pages.tintucbds.tintuc", compact('articles'));
     }
 
+    public function searchTinTuc(Request $req) {
+        $articles = Article::where('title','LIKE','%'.$req->timtintuc.'%')->get();
+
+        return view("pages.tintucbds.tintuc", compact('articles'));
+
+    }
     
     
 }

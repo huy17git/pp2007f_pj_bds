@@ -9,10 +9,6 @@ use App\Models\Article;
 use App\Models\Products;
 use App\Models\District;
 use App\Models\Province;
-use App\Models\User;
-
-
-
 use App\Models\Slide;
 
 class HomeController extends Controller
@@ -25,10 +21,15 @@ class HomeController extends Controller
         $l = 0;
         $districs = District::all();
         $provinces = Province::all();
-        $slides = Slide::where("type","banner");
+
+        $banners = Slide::where('type','banner')->get();
+        $sidebars = Slide::where('type','sidebar')->get();
 
         $products = Products::with('image')->limit(8)->orderBy('id','DESC')->get();
-        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','slides'));
+        $province1 = Province::orderBy('count_posts', 'desc')->limit(1)->get();
+        $province2 = Province::orderBy('count_posts', 'desc')->skip(1)->take(2)->get();
+        $province3 = Province::orderBy('count_posts', 'desc')->skip(3)->take(2)->get();
+        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'));
         
         
         
@@ -37,5 +38,11 @@ class HomeController extends Controller
     public function welcome()
     {
         return view('home');
+    }
+
+    public function search()
+    {
+        
+        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'));
     }
 }

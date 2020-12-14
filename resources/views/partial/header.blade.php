@@ -1,6 +1,6 @@
 <div class="form-content">
     <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND" style=""></div>
-    
+
     <div id="staticDomain" statsdomain="https://statistic.batdongsan.com.vn"
         data-fileimg="https://file4.batdongsan.com.vn" data-web="https://batdongsan.com.vn"
         data-msvrouter="/microservice-architecture-router"
@@ -16,13 +16,13 @@
                 <div id="ban_wide_left" class="ban_wide_scroll"
                     style="display: block; position: absolute; top: 145.883px; bottom: inherit; left: 46px;">
                     <div class="adPosition" positioncode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px"></div>
-                    
+
                 </div>
 
                 <div id="ban_left" class="ban_scroll"
                     style="display: block; top: 145.883px; position: absolute; left: 86px; bottom: inherit;">
                     <div class="adPosition" positioncode="BANNER_POSITION_LEFT" style="margin-bottom: 0px"></div>
-                   
+
                 </div>
             </div>
         </div>
@@ -33,13 +33,12 @@
                 <a href="javascript:void(0)" id="nav_back" rel="nofollow" title="Danh mục"
                     class="div-panel st-panel fleft">
                     <span class="img-naga-l">
-                        <img src="./assets/image/ic_caret_left_1.svg" alt="back">
+                        <img src="/assets/image/ic_caret_left_1.svg" alt="back">
                     </span>
                 </a>
                 <div class="text-center header-logo">
                     <a href="https://batdongsan.com.vn/" title="Nhà đất" rel="nofollow">
-                        <img src="./assets/image/logo_wap1.svg"
-                            onerror="this.src='https://staticfile.batdongsan.com.vn/image/newhome/logo-wap.png'"
+                        <img src="/assets/image/logo_wap1.svg"
                             class="logo-wap" alt="logo batdongsan.com.vn" title="Batdongsan.com.vn">
                     </a>
                 </div>
@@ -48,7 +47,7 @@
                     <span class="img-naga-r">
                         <img class=" lazyloaded" ignore-lazy-loading=""
                             data-src="https://staticfile.batdongsan.com.vn/image/mobile/icons/24x24/filled/ic_savelist.svg"
-                            src="./assets/image/ic_savelist.svg">
+                            src="/assets/image/ic_savelist.svg">
                         <span class="img-naga-notification hide">
                             0
                         </span>
@@ -57,7 +56,7 @@
                 <a href="javascript:void(0)" id="nav_list" rel="nofollow" title="Danh mục"
                     class="div-panel st-panel fright in">
                     <span class="img-naga-r">
-                        <img src="./assets/image/ic_hamburger_menu_1.svg" alt="menu">
+                        <img src="/assets/image/ic_hamburger_menu_1.svg" alt="menu">
                     </span>
                 </a>
             </div>
@@ -75,13 +74,13 @@
                     <div class="login-group" style="" aria-label="Danh sách tin đã lưu" data-microtip-position="bottom"
                         role="tooltip">
                         <span class="notification" id="notiSave">
-                            <img class="iconNotiSave" src="./assets/image/ic_shortlist_002.svg">
+                            <img class="iconNotiSave" src="/assets/image/ic_shortlist_002.svg">
                             <i class="mnu-notify-icon-unread nqv" style="display: none"></i>
                             <div class="listSave" style="display: none;">
                                 <div class="header">Tin đăng đã lưu</div>
                                 <div class="content">
                                     <p class="center" style="padding: 80px 0 80px;"><img
-                                            src="./assets/image/EmptyState.svg" alt="no data"></p>
+                                            src="/assets/image/EmptyState.svg" alt="no data"></p>
                                 </div>
                                 <div class="footer" style="display: none !important;">
                                     <a class="marked-products-view-more" href="https://batdongsan.com.vn/tin-da-luu"
@@ -99,7 +98,7 @@
                             </span>
                             <span class="line">|</span>
                             <span>
-                                <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+                                <a href="{{ route('createUser') }}" rel="nofollow" id="kct_username">Đăng ký</a>
                             </span>
                         </div>
                     </div>
@@ -108,7 +107,7 @@
                             class="btn-border-grey">Đăng tin</a>
                     </div>
 
-                @else
+                @elseif(Auth::user()->inRole('admin'))
                     <div class="right-menu">
                         <div class="home-header-menu">
                             <div class="home-header-menu">
@@ -116,18 +115,18 @@
                                     <li class="lv0"><span class="text"
                                             style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
-                                            <li class="lv1"><a href="{{ route('adminIndex') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
                                                         class="text">Dashboard</span></a>
                                             </li>
-                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberPost') }}" class="haslink "><span
                                                         class="text">Profile</span></a>
                                             </li>
 
-                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberPost') }}" class="haslink "><span
                                                         class="text">Post</span></a>
                                             </li>
                                             <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();"><span
+                                                                    document.getElementById('logout-form').submit();"><span
                                                         class="text">Logout</span></a>
                                             </li>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -136,6 +135,56 @@
                                             </form>
                                         </ul>
                                     </li>
+                                    <li class="lv0"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();"><span
+                                                class="text">Logout</span></a>
+                                    </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    <div class="right-menu">
+                        <div class="home-header-menu">
+                            <div class="home-header-menu">
+                                <ul class="dropdown-navigative-menu">
+                                    <li class="lv0"><span class="text"
+                                            style="color: blue">{{ Auth::user()->username }}</span>
+                                        <ul>
+                                            <li class="lv1"><a href="{{ route('memberIndex') }}" class="haslink "><span
+                                                        class="text">Dashboard</span></a>
+                                            </li>
+                                            <li class="lv1"><a href="{{ route('memberViewPost') }}" class="haslink "><span
+                                                        class="text">Profile</span></a>
+                                            </li>
+
+                                            <li class="lv1"><a href="{{ route('memberViewPost') }}" class="haslink "><span
+                                                        class="text">Post</span></a>
+                                            </li>
+                                            <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();"><span
+                                                        class="text">Logout</span></a>
+                                            </li>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                            </form>
+                                        </ul>
+                                    </li>
+                                    <li class="lv0"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();"><span
+                                                class="text">Logout</span></a>
+                                    </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
 
 
 
@@ -150,9 +199,8 @@
             <div class="drop-menu">
                 <div class="left-menu">
                     <h1>
-                        <a href="{{ route('home') }}" rel="nofollow"><img src="./assets/image/ic_logo_2.svg"
+                        <a href="{{ route('home') }}" rel="nofollow"><img src="/assets/image/ic_logo_2.svg"
                                 ignore-lazy-loading="" noloaderror="true"
-                                onerror="this.src='https://staticfile.batdongsan.com.vn/image/icons/ic_logo_2.png'"
                                 alt="Kênh thông tin mua bán, cho thuê nhà đất số 1" title="Batdongsan.com.vn"></a>
                         <span class="visual-hidden">Batdongsan.com.vn</span>
                     </h1>
@@ -163,16 +211,16 @@
 
                         <ul class="dropdown-navigative-menu">
                             <li class="lv0 tablet"><a href="https://batdongsan.com.vn/tin-da-luu"><span
-                                        class="icon"><img src="./assets/image/ic_shortlist.svg"></span><span
+                                        class="icon"><img src="/assets/image/ic_shortlist.svg"></span><span
                                         class="text">Tin đăng đã lưu</span></a></li>
                             <li class="lv0 tablet active hover"><a href="https://batdongsan.com.vn/"><span
-                                        class="icon"><img src="./assets/image/ic_house.png"></span><span
+                                        class="icon"><img src="/assets/image/ic_house.png"></span><span
                                         class="text">Trang chủ</span></a></li>
                             @foreach ($arr_menu[0] as $mp)
 
                                 <li class="lv0">
                                     <a href="{{ $mp['slug'] }}" class="haslink "><span class="icon"><img
-                                                src="./assets/image/ic_for_sale.svg"></span><span
+                                                src="/assets/image/ic_for_sale.svg"></span><span
                                             class="text">{{ $mp['name'] }}</span></a>
                                     <div class="arrrow"></div>
                                     <ul>
@@ -216,11 +264,11 @@
     </header>
 
     <div class="popupMarking homePage save" style="display: none">
-        <img src="./assets/image/ic_unsave.svg">
+        <img src="/assets/image/ic_unsave.svg">
         <span> Lưu tin thành công</span>
     </div>
     <div class="popupMarking homePage unsave" style="display: none">
-        <img src="./assets/image/ic_save.svg">
+        <img src="/assets/image/ic_save.svg">
         <span> Đã bỏ lưu tin</span>
     </div>
 </div>

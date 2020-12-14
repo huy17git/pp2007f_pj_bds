@@ -22,7 +22,7 @@ class checkAdmin
             return $next($request);
         } else {
 
-        return redirect('/');
+        return redirect()->back()->with('mess','You are not admin');
 
         }
     }

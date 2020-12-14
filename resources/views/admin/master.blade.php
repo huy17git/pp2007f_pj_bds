@@ -12,7 +12,7 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/assets/image/logo/apple-touch-icon.html">
-    <link rel="shortcut icon" href="/assets/image/logo/favicon.png">
+    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- core dependcies css -->
     <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
@@ -36,9 +36,12 @@
             <div class="header navbar">
                 <div class="header-container">
                     <div class="nav-logo">
-                        <a href="index.html">
-                            <div class="logo logo-dark" style="background-image: url('https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg')"></div>
-                            <div class="logo logo-white" style="background-image: url('/assets/image/logo/logo-white.png')"></div>
+                        <a href="/">
+                            <div class="logo logo-dark"
+                                style="background-image: url('https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg')">
+                            </div>
+                            <div class="logo logo-white"
+                                style="background-image: url('/assets/image/logo/logo-white.png')"></div>
                         </a>
                     </div>
                     <ul class="nav-left">
@@ -112,7 +115,8 @@
                                         </span>
                                         <ul class="list-media">
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-3.jpg" alt="">
                                                     </div>
@@ -122,7 +126,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-5.jpg" alt="">
                                                     </div>
@@ -135,7 +140,8 @@
                                     </div>
                                 </div>
                                 <div class="search-footer">
-                                    <span>You are Searching for '<b class="text-dark"><span class="serach-text-bind"></span></b>'</span>
+                                    <span>You are Searching for '<b class="text-dark"><span
+                                                class="serach-text-bind"></span></b>'</span>
                                 </div>
                             </div>
                         </li>
@@ -173,7 +179,8 @@
                                 <li>
                                     <a href="#">
                                         <div class="text-center">
-                                            <i class="mdi mdi-play-circle-outline font-size-30 icon-gradient-success"></i>
+                                            <i
+                                                class="mdi mdi-play-circle-outline font-size-30 icon-gradient-success"></i>
                                             <p class="m-b-0">Video</p>
                                         </div>
                                     </a>
@@ -189,7 +196,8 @@
                                 <li>
                                     <a href="#">
                                         <div class="text-center">
-                                            <i class="mdi mdi-image-filter-drama font-size-30 icon-gradient-success"></i>
+                                            <i
+                                                class="mdi mdi-image-filter-drama font-size-30 icon-gradient-success"></i>
                                             <p class="m-b-0">Cloud</p>
                                         </div>
                                     </a>
@@ -209,7 +217,8 @@
                                     </h5>
                                 </li>
                                 <li>
-                                    <ul class="list-media overflow-y-auto relative scrollable" style="max-height: 300px">
+                                    <ul class="list-media overflow-y-auto relative scrollable"
+                                        style="max-height: 300px">
                                         <li class="list-item border bottom">
                                             <a href="javascript:void(0);" class="media-hover p-15">
                                                 <div class="media-img">
@@ -274,25 +283,27 @@
                                 </li>
                                 <li class="p-v-15 p-h-20 text-center">
                                     <span>
-                                        <a href="#" class="text-gray">Check all notifications <i class="ei-right-chevron p-l-5 font-size-10"></i></a>
+                                        <a href="#" class="text-gray">Check all notifications <i
+                                                class="ei-right-chevron p-l-5 font-size-10"></i></a>
                                     </span>
                                 </li>
                             </ul>
                         </li>
                         <li class="user-profile dropdown dropdown-animated scale-left">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="/storage/img/users/{{ $admin->avatar }}" alt="">
+                                <img class="profile-img img-fluid" src="/storage/img/users/{{ Auth::user()->avatar }}"
+                                    alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-md p-v-0">
                                 <li>
                                     <ul class="list-media">
                                         <li class="list-item p-15">
                                             <div class="media-img">
-                                                <img src="/storage/img/users/{{ $admin->avatar }}" alt="">
+                                                <img src="/storage/img/users/{{ auth::user()->avatar }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title text-semibold">{{ $admin->username }}</span>
-                                                <span class="sub-title">{{ $admin->fullname }}</span>
+                                                <span class="title text-semibold">{{ auth::user()->username }}</span>
+                                                <span class="sub-title">{{ auth::user()->fullname }}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -305,7 +316,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/member/index">
                                         <i class="ti-user p-r-10"></i>
                                         <span>Profile</span>
                                     </a>
@@ -318,11 +329,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('login') }}">
-                                        <i class="ti-power-off p-r-10"></i>
-                                        <span>Logout</span>
-                                    </a>
+                                    <a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"><span
+                                            class="text">Logout</span></a>
                                 </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </ul>
                         </li>
                         <li class="m-r-10">
@@ -337,7 +350,7 @@
 
             <!-- Side Nav START -->
             <div class="side-nav expand-lg">
-            <div class="side-nav-inner">
+                <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
                         <li class="side-nav-header">
                             <span>Navigation</span>
@@ -373,6 +386,33 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
+                                <span class="title">Users</span>
+                                <span class="arrow">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (Auth::user()->inRole('admin'))
+                                    <li>
+                                        <a href="{{ Route('userIndex') }}">All User</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ Route('createUser') }}">Create New User</a>
+                                    </li>
+                                @else
+                                    <li>
+                                        <a href="{{ Route('memberIndex') }}">My User</a>
+                                    </li>
+                                @endif
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-tune-vertical"></i>
+                                </span>
                                 <span class="title">Posts</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
@@ -380,30 +420,82 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{!! Route('viewPost') !!}">Edit Posts</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-tune-vertical"></i>
-                                </span>
-                                <span class="title">Users</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ Route('userIndex') }}">All User</a>
+                                    <a href="{!!  Route('memberViewPost') !!}">All Posts</a>
                                 </li>
                                 <li>
-                                    <a href="{{ Route('createUser') }}">Create New User</a>
+                                    <a href="{{ Route('schedulePost') }}">Schedule New Posts</a>
+                                </li>
+                                <li>
+                                    <a href="{!!  Route('shelfPost', auth::user()->id) !!}">My Posts</a>
+                                </li>
+                                <li>
+                                    <a href="{!!  Route('memberPost') !!}">Posts</a>
+                                </li>
+                                <li>
+                                    <a href="{!!  Route('trashPost') !!}">Trash Posts</a>
                                 </li>
 
                             </ul>
+
                         </li>
+
+                        @if (Auth::user()->inRole('admin'))
+                            <li class="nav-item dropdown ">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-gauge"></i>
+                                    </span>
+                                    <span class="title">Post Types</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="{{ route('postTypeIndex') }}">All Post Types</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('createPostType') }}">Create New Post Types</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-tune-vertical"></i>
+                                    </span>
+                                    <span class="title">Slides</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{!!  route('Slide') !!}">All Slides</a>
+                                        <a href="{{ route('createSlide') }}">Create New Slides</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-tune-vertical"></i>
+                                    </span>
+                                    <span class="title">Menus</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('menuIndex') }}">All Menus</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('createMenu') }}">Create New Menus</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -416,68 +508,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{route('listNews' ) }}">All News</a>
-                                    <a href="{{route('createNews') }}">Create News</a>
+                                    <a href="{{ route('listNews') }}">All News</a>
+                                    <a href="{{ route('createNews') }}">Create News</a>
 
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-gauge"></i>
-                                </span>
-                                <span class="title">Post Types</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="active">
-                                    <a href="{{ route('postTypeIndex') }}">All Post Types</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('createPostType') }}">Create New Post Types</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-tune-vertical"></i>
-                                </span>
-                                <span class="title">Slides</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{!!route ('Slide')!!}">All Slides</a>
-                                    <a href="{{ route('createSlide') }}">Create New Slides</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-tune-vertical"></i>
-                                </span>
-                                <span class="title">Menus</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ route('menuIndex') }}">All Menus</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('createMenu') }}">Create New Menus</a>
-                                </li>
-                            </ul>
-                        </li>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -603,7 +640,8 @@
                                         <h6 class="p-h-20 text-uppercase text-semibold">Online</h6>
                                         <ul class="list-media">
                                             <li class="list-item unread-msg">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-1.jpg" alt="">
                                                         <span class="status success"></span>
@@ -618,7 +656,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item unread-msg">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                         <span class="status success"></span>
@@ -633,7 +672,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-3.jpg" alt="">
                                                         <span class="status success"></span>
@@ -650,7 +690,8 @@
                                         <h6 class="p-h-20 text-uppercase text-semibold">Away</h6>
                                         <ul class="list-media">
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-4.jpg" alt="">
                                                         <span class="status away"></span>
@@ -661,7 +702,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-5.jpg" alt="">
                                                         <span class="status away"></span>
@@ -672,7 +714,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-6.jpg" alt="">
                                                         <span class="status away"></span>
@@ -683,7 +726,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-7.jpg" alt="">
                                                         <span class="status away"></span>
@@ -699,7 +743,8 @@
                                         <h6 class="p-h-20 text-uppercase text-semibold">Busy</h6>
                                         <ul class="list-media">
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-8.jpg" alt="">
                                                         <span class="status busy"></span>
@@ -710,7 +755,8 @@
                                                 </a>
                                             </li>
                                             <li class="list-item">
-                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                <a href="javascript:void(0);"
+                                                    class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
                                                         <img src="/assets/image/avatars/thumb-9.jpg" alt="">
                                                         <span class="status busy"></span>

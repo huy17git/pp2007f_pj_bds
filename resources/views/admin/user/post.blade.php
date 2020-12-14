@@ -23,7 +23,22 @@
         <div class="">
             <div class="row">
                 <div class="col-sm-12">
-                    <form role="form" id="form-validation" method="post" action="{!!  Route('postUser') !!}"
+                    @if (session('post_success'))
+                        <div class="col-sm-12 bg-success">
+                            <p class="">
+                                <strong>{{ session('post_success') }}</strong>
+                            </p>
+                        </div>
+                    @endif
+
+                    @if (session('post_error'))
+                        <div class="col-sm-12 bg-danger">
+                            <p class="">
+                                <strong>{{ session('post_error') }}</strong>
+                            </p>
+                        </div>
+                    @endif
+                    <form role="form" id="form-validation" method="post" action="{!!  Route('memberStore') !!}"
                         enctype="multipart/form-data">
 
                         @csrf
@@ -42,14 +57,16 @@
                                 <div class="col-sm-4">
                                     <select name="appearance" class="form-control" id='appearance'>
                                         <option class="district" value="0" name="appearance" required>Nhà đất bán</option>
-                                        <option class="district" value="1" name="appearance" required>Nhà đất cho thuê</option>
+                                        <option class="district" value="1" name="appearance" required>Nhà đất cho thuê
+                                        </option>
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label control-label m-l-2">Type *</label>
                                 <div class="col-sm-4">
                                     <select name="category" class="form-control" id='type'>
                                         @foreach ($categories as $category)
-                                        <option class="district" value="{{ $category->id }}">{{ $category->name }}</option>
+                                            <option class="district" value="{{ $category->id }}">{{ $category->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -69,9 +86,7 @@
                                 <label class="col-sm-2 col-form-label control-label m-l-2">County / District *</label>
                                 <div class="col-sm-4">
                                     <select name="district" class="form-control" id='districts'>
-                                        @foreach ($districts as $district)
-                                        <option class="district" value="{{ $district->code }}">{{ $district->name }}</option>
-                                        @endforeach
+                                        <option class="district" value="0">District</option>
                                     </select>
                                 </div>
                             </div>
@@ -80,9 +95,7 @@
                                 <label class="col-sm-2 col-form-label control-label"> Wards </label>
                                 <div class="col-sm-4">
                                     <select name="ward" class="form-control" id='wards'>
-                                        @foreach ($wards as $ward)
-                                        <option value="{{ $ward->code }}" class="ward">{{ $ward->name }}</option>
-                                        @endforeach
+
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label control-label m-l-2">Street </label>
@@ -112,13 +125,13 @@
 
                                 <label class="col-sm-2 col-form-label control-label my-2">Unit</label>
                                 <div class="col-sm-4 my-2">
-                                    <select name="unit" class="form-control" id='type' style="font-size: 20px">
+                                    <select name="unit" class="form-control unit" id='type' style="font-size: 20px">
                                         <option class="district" value="tỷ">tỷ</option>
                                         <option class="district" value="triệu">triệu</option>
                                         <option class="district" value="triệu/m2">triệu/m2</option>
                                         <option class="district" value="triệu/m2">tỷ/m2</option>
                                         <option class="district" value="triệu/m2">triệu/tháng</option>
-                                        
+
                                     </select>
                                 </div>
 
@@ -253,7 +266,10 @@
                                     <label class="col-sm-12 col-form-label control-label">Ad type</label>
                                     <select name="post_type" class="form-control post_type" id='type' style="height:45px">
                                         @foreach ($post_types as $post_type)
-                                        <option class="district form-control posttype" id="posttype" price="{{ $post_type->price }}" value="{{ $post_type->id }}">{{ $post_type->name }}</option>
+                                            <option class="district form-control posttype" id="posttype"
+                                                price="{{ $post_type->price }}" value="{{ $post_type->id }}">
+                                                {{ $post_type->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -276,24 +292,23 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control date date2" name="end_date"
-                                                placeholder="Pick date end">
+                                                class="form-control date date2" name="end_date" placeholder="Pick date end">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <label class="col-sm-6 col-form-label control-label">Price:</label>
-                                    <label class="col-sm-4 col-form-label control-label" id="type_price">2000</label>
+                            <div class="row fs-4">
+                                <div class="col-sm-4 text-info">
+                                    <label class="col-sm-6 col-form-label control-label text-info">Price:</label>
+                                    <label class="col-sm-2 col-form-label control-label text-info" id="type_price">2000</label>
                                     VND
                                 </div>
-                                <span class="col-sm-2"></span>
+                                <span class="col-sm-2  text-info"></span>
                                 <div class="col-sm-2">
-                                    <label class="col-sm-12 col-form-label control-label text-right">Number of days:
+                                    <label class="col-sm-12 col-form-label control-label text-right  text-info">Number of days:
                                     </label>
                                 </div>
-                                <label class="col-sm-4 col-form-label control-label" id="days"></label>
+                                <label class="col-sm-4 col-form-label control-label text-info" id="days"></label>
                             </div>
 
                             <div class="row">
@@ -314,7 +329,7 @@
                         </div>
 
                         <div class="card-body border border-secondary shadow-sm p-3 mb-2">
-                            <div class="form-group row text-center my-3 mx-3">
+                            <div class="form-group row text-center my-3 mx-3 text-info">
                                 <div class="col-sm-3 border border-secondary bg-success mx-5">
                                     <label class="col-sm-12 col-form-label control-label ">Posting fee</label>
 
@@ -326,21 +341,24 @@
                                     <label class="col-sm-12 col-form-label control-label">Into money</label>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_type" style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="total_type"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <span class="my-10 text-info" style="font-size: 40px;">VND</span>
 
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="vat" style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="vat"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                        <span class="my-10 text-info" style="font-size: 40px;">VND</span>
                                 </div>
-                                <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_price" style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                <div class="col-sm-3 border border-secondary mx-5 text-info" style="height:200px">
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="total_price"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                        <span class="my-10 text-info" style="font-size: 40px;">VND</span>
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-gradient-success" value="Submit">
+                        <input type="submit" class="btn btn-gradient-success" value="Post">
                     </form>
                 </div>
             </div>
@@ -367,7 +385,7 @@
                 var id = $(this).val();
                 $.ajax({
                     type: "get",
-                    url: "/admin/user/ajaxDistrict",
+                    url: "/user/ajaxDistrict",
                     data: {
                         parent_code: id
                     },
@@ -396,7 +414,7 @@
                 let u = $(this).val();
                 $("#unit").html(u);
             });
-            
+
             $('.post_type').change(function() {
                 let t = $('option:selected', this).attr('price');
                 $("#type_price").html(t);
@@ -414,7 +432,7 @@
                 // alert(total);
             });
 
-            
+
             $('.date, .post_type').on('change blur', function() {
                 let t = $('option:selected', '.post_type').attr('price');
                 let ds = $('.date1').val();
@@ -422,9 +440,9 @@
                 let de = $('.date2').val();
                 let def = Date.parse(de);
                 let d = (def - dsf) / 86400 / 1000;
-                let f = (d*t);
-                let i = f*0.1;
-                let g = f+i;
+                let f = (d * t);
+                let i = f * 0.1;
+                let g = f + i;
                 $("#total_type").html(f);
                 $('#vat').html(i);
                 $('#total_price').html(g);
@@ -436,7 +454,7 @@
         function selectDistrict(id) {
             $.ajax({
                 type: "get",
-                url: "/admin/user/ajaxWard",
+                url: "/user/ajaxWard",
                 data: {
                     parent_code: id
                 },

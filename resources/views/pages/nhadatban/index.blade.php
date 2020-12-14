@@ -11,7 +11,7 @@
 
 <body class="bg-site">
 
-    <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
+    <form id="boxSearchForm" action="{{ route('search') }}" method="post" novalidate="novalidate">
         <div class="search-bar shadow-lv-1 clearfix">
             <div class="search-guide" style="left: 985.083px; top: 64px; display: block;">
                 <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
@@ -378,6 +378,56 @@
             <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
         </div>
     </form>
+    <script type="text/javascript">
+        ///<reference path='../../../../../../../DVG.BDS.WebApp.FrontEnd.StaticFiles/wwwroot/js/Common/FrontEnd.BoxSearch.js' />
+        (function getData() {
+            if (window.FrontEnd && window.FrontEnd.BoxSearch) {
+                var boxSearchServices = new FrontEnd.BoxSearch({
+                    boxSearchDataCacheKey: 'BoxSearchData',
+                    boxSearchDataCacheTime: 120,
+                    getDataForBoxSearchUrl: '/Systems/Home/GetDataForBoxSearch'
+                })
+                boxSearchServices.GetData().then(function(data) {
+                    (function callJQuery() {
+                        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.BoxProductSearchBinnova) {
+                            new FrontEnd.Product.BoxProductSearchBinnova({
+                                cities: data.cities,
+                                prices: data.priceLevels,
+                                url: '/Product/ProductSearch',
+                                serverCss: 'https://staticfile.batdongsan.com.vn',
+                                model: {
+                                    type: 38,
+                                    categoryId: 0,
+                                    cityCode: 'CN',
+                                    districtId: 0,
+                                    projectId: 0,
+                                    priceId: -1,
+                                    maxPrice: !!'' ? +'' : undefined,
+                                    minPrice: !!'' ? +'' : undefined,
+                                    areaId: -1,
+                                    maxArea: !!'' ? +'' : undefined,
+                                    minArea: !!'' ? +'' : undefined,
+                                    roomId: -1,
+                                    wardId: -1 < 0 ? 0 : -1,
+                                    streetId: (-1 < 0 ? 0 : -1),
+                                    directionId: -1,
+                                    tabIndex: 0
+                                },
+                                maxSearchingHistoriesLength: 20,
+                                syncTimeSearchingHistories: 5,
+                                syncSearchingHistoriesUrl: '/Product/ProductSearch/SyncSearchingHistories',
+                                removeSearchingHistoryUrl: '/Product/ProductSearch/RemoveSearchingHistory'
+                            });
+                        } else {
+                            setTimeout(callJQuery, 100);
+                        }
+                    })();
+                })
+            } else {
+                setTimeout(getData, 100);
+            }
+        })();
+    </script>
 
     <div class="popupMarking  save" style="display: none">
         <img src="./assets/image/ic_unsave.svg">
@@ -402,7 +452,15 @@
             <div class="breadcrumb all-grey-7 link-hover-blue">
                 <a href="https://batdongsan.com.vn/nha-dat-ban" level="1" title="Nhà đất bán tại Việt Nam">Bán</a><span>/</span><a href="https://batdongsan.com.vn/nha-dat-ban" level="2" title="Nhà đất bán tại Việt Nam">Tất cả BĐS trên toàn quốc</a>
             </div>
-
+            <script type="text/javascript">
+                (function callJQuery() {
+                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Breadcrumbs) {
+                        new FrontEnd.Product.Breadcrumbs({});
+                    } else {
+                        setTimeout(callJQuery, 100);
+                    }
+                })();
+            </script>
             <div class="product-list-header pad-top-8">
                     <h1>Mua bán nhà đất toàn quốc</h1>
                 <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">{!! $count_products !!}</span> bất động sản.</div>
@@ -441,9 +499,9 @@
                 @foreach ($products as $product)
                 <div class="vip0 product-item clearfix" uid="649852">
                     <div class="product-image ">
-                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" onclick="">
+                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" onclick="">
                             @foreach ($product->image as $image)
-                            <img class="product-avatar-img" alt="{!! $product['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" 
+                            <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" 
                             src=" {!! $image['link'] !!}" is-lazy-image="true" lazy-id="0">
                             @break
                             @endforeach
@@ -466,7 +524,15 @@
                             <span class="dot">·</span>
                             <span class="area">{!! $product['area'] !!} m²</span>
                             <span class="dot">·</span>
-                            <span class="location">{!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}</span>
+                            <span class="location">
+                            @if(isset($product->district['name_with_type']) && isset($product->province['name_with_type']))
+                             {!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}
+                            
+                            @else
+                                 ko co quan, tp
+                            
+                            @endif
+                        </span>
                         </div>
                         <div class="product-content">
                             {!! $product['content'] !!}
@@ -485,13 +551,8 @@
                 @endforeach
 
                 <div class="text-center">
-                    <div class="pagination">
-                        <a pid="1" class="actived" href="https://batdongsan.com.vn/nha-dat-ban">1</a>
-                        <a pid="2" class="" href="https://batdongsan.com.vn/nha-dat-ban/p2">2</a>
-                        <a pid="3" class="" href="https://batdongsan.com.vn/nha-dat-ban/p3">3</a>
-                        <a pid="4" class="" href="https://batdongsan.com.vn/nha-dat-ban/p4">4</a>
-                        <a pid="5" class="" href="https://batdongsan.com.vn/nha-dat-ban/p5">5</a>
-                        <a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/image/ic_double_caret_right.png"></a>
+                    <div class="paginate">
+                        {{ $products->links() }}
                     </div>
 
                 </div>
@@ -537,6 +598,26 @@
             <form id="productListBinnova" method="post">
                 <input id="hashAlias" type="hidden" value="48f0d40b1731d909212598242194556c2306f2dde9c6827fab303276aa8fec92">
             </form>
+            <script type="text/javascript">
+                (function callJQuery() {
+                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.ProductListBinnova) {
+                        var ctrl = new window.FrontEnd.Product.ProductListBinnova({
+                            getTabProjectUrl: '/Product/ProductListing/GetTabProject?projectId=0',
+                            model: {
+                                typeOfProduct: 38,
+                                categoryId: 0,
+                                cityCode: 'CN',
+                                districtId: 0,
+                                projectId: 0,
+                                wardId: 0,
+                                streetId: 0
+                            }
+                        });
+                    } else {
+                        setTimeout(callJQuery, 100);
+                    }
+                })();
+            </script>
         </div>
         <div class="main-right">
 
@@ -544,18 +625,12 @@
                 <h4 class="box-title">Lọc theo khoảng giá</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="/nha-dat-ban/-1/1/-1/-1" title="Mua bán nhà đất toàn quốc giá < 500 triệu">&lt; 500 triệu</a></li>
-                        <li><a href="/nha-dat-ban/-1/2/-1/-1" title="Mua bán nhà đất toàn quốc giá 500 - 800 triệu">500 - 800 triệu</a></li>
-                        <li><a href="/nha-dat-ban/-1/3/-1/-1" title="Mua bán nhà đất toàn quốc giá 800 triệu - 1 tỷ">800 triệu - 1 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/4/-1/-1" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/5/-1/-1" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/6/-1/-1" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/7/-1/-1" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/8/-1/-1" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/9/-1/-1" title="Mua bán nhà đất toàn quốc giá 10 - 20 tỷ">10 - 20 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/10/-1/-1" title="Mua bán nhà đất toàn quốc giá 20 - 30 tỷ">20 - 30 tỷ</a></li>
-                        <li><a href="/nha-dat-ban/-1/11/-1/-1" title="Mua bán nhà đất toàn quốc giá > 30 tỷ">&gt; 30 tỷ</a></li>
-                    </ul>
+                        <li><a href="?giamin=1&giamax=2" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                        <li><a href="?giamin=2&giamax=3" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                        <li><a href="?giamin=3&giamax=5" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="?giamin=5&giamax=7" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="?giamin=7&giamax=10" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        </ul>
                 </div>
             </div>
 
@@ -565,16 +640,12 @@
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="/nha-dat-ban/1/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
-                        <li><a href="/nha-dat-ban/2/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                        <li><a href="/nha-dat-ban/3/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="/nha-dat-ban/4/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="/nha-dat-ban/5/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="/nha-dat-ban/6/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
-                        <li><a href="/nha-dat-ban/7/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 200 - 250 m2">200 - 250 m2</a></li>
-                        <li><a href="/nha-dat-ban/8/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 250 - 300 m2">250 - 300 m2</a></li>
-                        <li><a href="/nha-dat-ban/9/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 300 - 500 m2">300 - 500 m2</a></li>
-                        <li><a href="/nha-dat-ban/10/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích >= 500 m2">&gt;= 500 m2</a></li>
+                        <li><a href="?dtmin=0&dtmax=30" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="?dtmin=30&dtmax=50" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="?dtmin=50&dtmax=80" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="?dtmin=80&dtmax=100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="?dtmin=100&dtmax=150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="?dtmin=150&dtmax=200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -590,7 +661,7 @@
                         @foreach($provinces as $province)
                         <li>
                             <h3>
-                                <a href="mua-ban-nha-dat-{{ $province->slug }}" title="{{$province->name}}" id="{{ $province->id }}">
+                                <a href="?tp={!! $province->slug!!}" title="{{$province->name}}" id="{{ $province->id }}">
                                     {!! $province->name !!} ({!! $province->count_posts !!})
                                 </a>
                             </h3>
@@ -599,8 +670,6 @@
                     </ul>
                 </div>
             </div>
-
-
 
 
 
@@ -633,6 +702,39 @@
                 </div>
             </div>
         </div>
+    </div>
+        
+    <div class="divide-full"></div>
+
+        <div class="box-common box-common-filled box-utility link-hover-blue">
+    <h4 class="box-title">Hỗ trợ tiện ích</h4>
+    <div class="box-content">
+        <ul>
+            <li>
+                <a href="/ho-tro-tien-ich/ht-xem-huong-nha" title="Tư vấn phong thủy" rel="nofollow">
+                    Tư vấn phong thủy
+                </a>
+            </li>
+            <li>
+                <a href="/ho-tro-tien-ich/ht-du-toan-chi-tiet" title="Dự tính chi phí làm nhà" rel="nofollow">
+                    Dự tính chi phí làm nhà
+                </a>
+            </li>
+            <li>
+                <a href="/ho-tro-tien-ich/ht-tinh-lai-suat" title="Tính lãi suất" rel="nofollow">
+                    Tính lãi suất
+                </a>
+            </li>
+            <li>
+                <a href="/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a>
+            </li>
+            <li>
+                <a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    </div>
     </div>
     <div class="banner-bottom">
         <div style="float: left; width: 560px">

@@ -3,7 +3,7 @@
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')
-<link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
+<link rel="stylesheet" href="/assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 <body class="bg-site">
     
 <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
-    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
+    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="/assets/image/ic_triangle.svg"></div>
 	    </div>
         <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
             <li class="actived" ptype="38">Bán</li>
@@ -24,7 +24,7 @@
             <input id="Keyword" name="Keyword" type="hidden" value="">
             <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
             <span class="icon-close hiding">
-                <img src="./assets/image/ic_close.png">
+                <img src="/assets/image/ic_close.png">
             </span>
         </div>
         <div id="divCategoryRe" class="select-control select-cate">
@@ -80,7 +80,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="price-slider-range slider-range">
                         <input id="txtPriceMinValue" name="MinPrice" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtPriceMaxValue" name="MaxPrice" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="price-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -103,7 +103,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="area-slider-range slider-range">
                         <input id="txtAreaMinValue" name="MinArea" placeholder="Từ" class="min-value" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtAreaMaxValue" name="MaxArea" placeholder="Đến" class="max-value" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="area-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -143,7 +143,7 @@
         </div>
         <div class="select-control filter-control">
             <div class="select-control-label" aria-label="Tìm kiếm nâng cao" data-microtip-position="top" role="tooltip">
-                Lọc thêm<span class="filter-info"><img src="./assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
+                Lọc thêm<span class="filter-info"><img src="/assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
             </div>
             <input type="hidden" id="hdbFilter" value="0">
             <div class="select-filter-dropbox custom-dropbox advance-select-options hiding" style="display: none; height: 516px;">
@@ -232,7 +232,7 @@
 
 
         <input type="button" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
+        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="/assets/image/ic_reset.svg"></div>
     </div>
 </form>
 <script type="text/javascript">
@@ -288,11 +288,11 @@
 </script>
 
         <div class="popupMarking  save" style="display: none">
-            <img src="./assets/image/ic_unsave.svg">
+            <img src="/assets/image/ic_unsave.svg">
             <span> Lưu tin thành công</span>
         </div>
         <div class="popupMarking  unsave" style="display: none">
-            <img src="./assets/image/ic_save.svg">
+            <img src="/assets/image/ic_save.svg">
             <span> Đã bỏ lưu tin</span>
         </div>
 
@@ -412,7 +412,7 @@
 <a pid="3" class="" href="https://batdongsan.com.vn/nha-dat-ban/p3">3</a>
 <a pid="4" class="" href="https://batdongsan.com.vn/nha-dat-ban/p4">4</a>
 <a pid="5" class="" href="https://batdongsan.com.vn/nha-dat-ban/p5">5</a>
-<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/image/ic_double_caret_right.png"></a>
+<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="/assets/image/ic_double_caret_right.png"></a>
 </div>
 
         </div>
@@ -475,21 +475,16 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
         <h4 class="box-title">Lọc theo khoảng giá</h4>
         <div class="box-content">
             <ul class="link-hover-blue height">
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/2/-1/-1" title="Mua bán nhà đất toàn quốc giá 500 - 800 triệu">500 - 800 triệu</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/3/-1/-1" title="Mua bán nhà đất toàn quốc giá 800 triệu - 1 tỷ">800 triệu - 1 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/4/-1/-1" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/5/-1/-1" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/6/-1/-1" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/7/-1/-1" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/8/-1/-1" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/9/-1/-1" title="Mua bán nhà đất toàn quốc giá 10 - 20 tỷ">10 - 20 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/10/-1/-1" title="Mua bán nhà đất toàn quốc giá 20 - 30 tỷ">20 - 30 tỷ</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/-1/11/-1/-1" title="Mua bán nhà đất toàn quốc giá &gt; 30 tỷ">&gt; 30 tỷ</a></li>
+                    <li><a href="?giamin=1&giamax=2" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                    <li><a href="?giamin=2&giamax=3" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                    <li><a href="?giamin=3&giamax=5" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                    <li><a href="?giamin=5&giamax=7" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                    <li><a href="?giamin=7&giamax=10" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
             </ul>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>
@@ -501,21 +496,17 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
         <h4 class="box-title">Lọc theo diện tích</h4>
         <div class="box-content">
             <ul class="link-hover-blue height">
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/1/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích &lt;= 30 m2">&lt;= 30 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/2/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/3/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/4/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/5/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/6/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/7/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 200 - 250 m2">200 - 250 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/8/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 250 - 300 m2">250 - 300 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/9/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 300 - 500 m2">300 - 500 m2</a></li>
-                    <li><a href="https://batdongsan.com.vn/nha-dat-ban/10/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích &gt;= 500 m2">&gt;= 500 m2</a></li>
+                    <li><a href="?dtmin=0&dtmax=30" title="Mua bán nhà đất toàn quốc diện tích &lt;= 30 m2">&lt;= 30 m2</a></li>
+                    <li><a href="?dtmin=30&dtmax=50" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                    <li><a href="?dtmin=50&dtmax=80" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                    <li><a href="?dtmin=80&dtmax=100" title="Mua bán nhà đất toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                    <li><a href="?dtmin=10&dtmax=150" title="Mua bán nhà đất toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                    <li><a href="?dtmin=150&dtmax=200" title="Mua bán nhà đất toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
             </ul>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>
@@ -529,146 +520,15 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
 
         <div class="box-content link-hover-blue">
             <ul>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-tp-hcm" title="Mua bán nhà đất tại Hồ Chí Minh">
-                                Hồ Chí Minh (72034)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-ha-noi" title="Mua bán nhà đất tại Hà Nội">
-                                Hà Nội (57574)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-binh-duong" title="Mua bán nhà đất tại Bình Dương">
-                                Bình Dương (10821)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-dong-nai" title="Mua bán nhà đất tại Đồng Nai">
-                                Đồng Nai (7487)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-ba-ria-vung-tau" title="Mua bán nhà đất tại Bà Rịa Vũng Tàu">
-                                Bà Rịa Vũng Tàu (4356)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-hai-phong" title="Mua bán nhà đất tại Hải Phòng">
-                                Hải Phòng (2506)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-binh-thuan" title="Mua bán nhà đất tại Bình Thuận  ">
-                                Bình Thuận   (1780)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-quang-ngai" title="Mua bán nhà đất tại Quảng Ngãi">
-                                Quảng Ngãi (215)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-khanh-hoa" title="Mua bán nhà đất tại Khánh Hòa">
-                                Khánh Hòa (3493)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-nghe-an" title="Mua bán nhà đất tại Nghệ An">
-                                Nghệ An (210)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-yen-bai" title="Mua bán nhà đất tại Yên Bái">
-                                Yên Bái (24)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-quang-tri" title="Mua bán nhà đất tại Quảng Trị">
-                                Quảng Trị (30)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-thai-binh" title="Mua bán nhà đất tại Thái Bình">
-                                Thái Bình (67)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-ben-tre" title="Mua bán nhà đất tại Bến Tre">
-                                Bến Tre (88)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-dien-bien" title="Mua bán nhà đất tại Điện Biên">
-                                Điện Biên (3)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-ca-mau" title="Mua bán nhà đất tại Cà Mau">
-                                Cà Mau (23)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-dak-lak" title="Mua bán nhà đất tại Đắk Lắk">
-                                Đắk Lắk (110)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-hoa-binh" title="Mua bán nhà đất tại Hòa Bình">
-                                Hòa Bình (1541)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-son-la" title="Mua bán nhà đất tại Sơn La">
-                                Sơn La (6)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="https://batdongsan.com.vn/nha-dat-ban-binh-dinh" title="Mua bán nhà đất tại Bình Định">
-                                Bình Định (403)
-                            </a>
-                        </h3>
-                    </li>
+            @foreach($provinces as $province)
+                        <li>
+                            <h3>
+                                <a href="?tp={!! $province->slug!!}" title="{{$province->name}}" id="{{ $province->id }}">
+                                    {!! $province->name !!} ({!! $province->count_posts !!})
+                                </a>
+                            </h3>
+                        </li>
+                        @endforeach
             </ul>
         </div>
     </div>

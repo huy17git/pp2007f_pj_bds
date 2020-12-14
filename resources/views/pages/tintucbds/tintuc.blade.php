@@ -45,29 +45,20 @@
             <div class="site-center">
                 
 
-<input type="hidden" value="3" id="activeTxtSelect" />
+
 <div id="MiddleSubMenu">
     <div class="home-top-search" style="padding-bottom: 10px !important;">
     <div class="home-top-search-keyword">
-        <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword">
+    <form role="search" method="get" id="searchform" action="{{route('searchTinTuc')}}">
+            <input type="text" value="" name="timtintuc" id="searchnews" placeholder="Nhap Tu Khoa..."/>
+            <button type="submit" id="searchsubmit">Tim Kiem<button>
+        </form> 
     </div>
     <div class="advance-select-box" id="home-top-search">
-        <span class="select-text hasvalue">
-            <span class="select-text-content" style="width: 100px;">Hỏi đáp</span>
-        </span>
         <input type="hidden" id="cboTypeSearch" value="4">
     </div>
     <div id="home-top-search-otions" class="advance-select-options advance-options" hddvalue="cboTypeSearch" ddlid="home-top-search" style="">
-        <ul class="advance-options" style="min-width: 125px;">
-            <li vl="1" class="advance-options" style="min-width: 93px;">Nhà đất bán</li>
-            <li vl="2" class="advance-options" style="min-width: 93px;">Nhà đất cho thuê</li>
-            <li vl="3" class="advance-options" style="min-width: 93px;">Tin tức</li>
-            <li vl="5" class="advance-options" style="min-width: 93px;">Dự án</li>
-            <li vl="6" class="advance-options" style="min-width: 93px;">Doanh nghiệp</li>
-            <li vl="7" class="advance-options" style="min-width: 93px;">Môi giới</li>
-        </ul>
     </div>
-    <img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="SearchKeyword();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all" alt="Tìm kiếm" name="btnSearch" id="btnSearch">
 </div>
 <div id="gglbody"></div>
 <div class="clear"></div>
@@ -89,6 +80,10 @@
                     <div id="ctl23_ctl00_panelCate" class="detailsView-title-style">
                         <div class="font-title-list-news"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
                     
             
             
@@ -124,13 +119,11 @@
     <div class="margit5">
         <div class="tc-tit-bottom">
                 <div class="ks-pagination-links" align="center" stype="float: right">
-<a pId="1" href="/tin-thi-truong"><div class="style-pager-row-selected">1</div></a>
-<a pId="2" href="/tin-thi-truong/p2"><div class="">2</div></a>
-<a pId="3" href="/tin-thi-truong/p3"><div class="">3</div></a>
-<a pId="4" href="/tin-thi-truong/p4"><div class="">4</div></a>
-<a pId="5" href="/tin-thi-truong/p5"><div class="">5</div></a>
-<a pId="2" href="/tin-thi-truong/p2"><div>...</div></a>
-<a pId="2137" href="/tin-thi-truong/p2137"><div>&gt;</div></a>
+<a pId="1" href="/tin-tuc"><div class="style-pager-row-selected">1</div></a>
+<a pId="2" href="/tin-tuc/p2"><div class="">2</div></a>
+<a pId="3" href="/tin-tuc/p3"><div class="">3</div></a>
+<a pId="4" href="/tin-tuc/p4"><div class="">4</div></a>
+<a pId="5" href="/tin-tuc/p5"><div class="">5</div></a>
 </div>
 
         </div>

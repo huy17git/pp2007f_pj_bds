@@ -1,5 +1,5 @@
 
 <option class="ward">Ward</option>
 @foreach ($wards as $ward)
-    <option class="ward"> {{ $ward->name }} </option>
+    <option class="ward" value="{{ $ward->code }}"> {{ $ward->name }} </option>
 @endforeach

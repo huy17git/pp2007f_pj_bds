@@ -11,6 +11,7 @@ use App\Models\Post_type;
 use App\Models\Ward;
 use App\Models\Products;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
@@ -18,22 +19,19 @@ use Illuminate\Http\UploadedFile;
 class UserController extends Controller
 {
     public function index() {
-        $admin = Auth::user();
-        $users = User::all();
-        return view ('admin.user.index',compact('users','admin'));
+        $users = User::with('roles')->get();
+        $user = Auth::user();
+        return view ('admin.user.index', compact('users', 'user'));
     }
 
     public function create() {
 
         $provinces = Province::all();
-        $districts = District::all();
-        return view ('admin.user.create',compact('provinces','districts'));
+        return view ('admin.user.create',compact('provinces'));
     }
 
     public function ajaxDistrict(Request $request) {
-        if($request->get('parent_code') == 0) {
-            echo view ('admin.user.districtajax');
-        }
+
         $districts = District::where('parent_code',$request->get('parent_code'))->get();
 
         echo view ('admin.user.districtajax',compact('districts'));
@@ -107,6 +105,9 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
+        $account = $user->account;
+        $user->account = $account + $request->account;
+        $user->roles()->sync($request->role);
         $user->save();
         $users = User::all();
         return view ('admin.user.index',compact('users'));
@@ -129,9 +130,51 @@ class UserController extends Controller
         return view ('admin.user.post',compact('provinces','districts', 'wards', 'post','categories', 'post_types'));
     }
 
+    public function createUser() {
+
+        return view ('auth.regis2');
+    }
+
+    public function storeUser(Request $request) {
+        $user = new User();
+        // dd($request);
+        // $disk = Storage::disk('local');
+        // dd($path);
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = $request->inputPassword;
+        $user->fullname = $request->fullname;
+        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
+        $user->address = $request->address;
+        $user->phonenumber = $request->phonenumber;
+        $user->sex = $request->sex;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $name = $file->getClientOriginalName();
+            
+            $nameAva = time()."_".$name;
+            
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
+        
+        $user->save();
+        $user1 = User::where('email',$request->email)->first();
+
+        $userRole = DB::table('role_user')->insert([
+            'user_id' => $user1->id,
+            'role_id' => 2,
+        ]);
+
+        return redirect('/login');
+    }
     public function indexMember() {
         $user = Auth::user();
-        return view ('admin.user.index',compact('user'));
+        return view ('member.index',compact('user'));
     }
 
 }

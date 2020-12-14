@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TinTucController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,15 +18,32 @@ use Illuminate\Support\Facades\Route;
 
 // HomeController index
 Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
 
+Route::get('/home', 'HomeController@welcome')->name('welcome');
+
+Route::get('/user/create','UserController@createUser')->name('createUser');
+
+Route::post('/user/create','UserController@storeUser')->name('storeUser');
+
+Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
+Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
+
+Route::get('/search', 'HomeController@search')->name('search');
+
+Route::prefix('/member')->group(function () {
+    Route::get('/index','UserController@indexMember')->name('memberIndex');
+    Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
+    Route::get('/post/schedule', 'PostController@schedulePost')->name('schedulePost');
+    Route::get('/post/scheduleAjax', 'PostController@scheduleAjax')->name('scheduleAjaxPost');
+
+    Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
+    Route::get('/post','UserController@post')->name('memberPost')->middleware('can:products.create');
+    Route::post('/post','PostController@store')->name('memberStore')->middleware('can:products.create');
 
 
-
-
-
-
-
+});
 
 
 // check post
@@ -53,6 +71,9 @@ Route::get('/chinh-sach','TinTucController@chinhsach')->name('chinh_sach');
 Route::get('/quy-hoach','TinTucController@quyhoach')->name('quy_hoach');
 Route::get('/bds-the-gioi','TinTucController@bdsthegioi')->name('tintucbds_tg');
 Route::get('/tai-chinh-chung-khoan-bds','TinTucController@taichinhbds')->name('tai_chinh');
+
+
+Route::get('/tin-tuc-search', 'TinTucController@searchTinTuc')->name('searchTinTuc');
 //Tintucsinglepost
 Route::get('/articles{id}', 'TinTucController@articles')->name('tintuc_single_post');
 
@@ -61,10 +82,11 @@ Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
 Route::get('/ban-can-ho-chung-cu', 'NhaDatBanController@banCanHoChungCu')->name('ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhaDatBanController@banNhaRieng')->name('ban_nha_rieng');
 Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nha_mat_pho');
-Route::get('/nha-dat-ban{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
+Route::get('/nha-dat-ban/{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
 Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_district');
-Route::get('/mua-ban-nha-dat-{slug}', 'NhaDatBanController@filterMuaBanNhaDat')->name('filterMuaBanNhaDat');
+
+
 
 
 //NhaDatChoThueController ----TAI ANH
@@ -104,7 +126,6 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 
-
 //   ADMIN
 Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::prefix('/admin',)->group(function () {
@@ -113,18 +134,15 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         });
     // admin
     // User - CRUD
-        Route::get('/user','UserController@index')->name('adminIndex');
-        Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
-        Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
-        Route::get('/user/create','UserController@create')->name('createUser');
-        Route::post('/user/create','UserController@store')->name('storeUser');
+        Route::get('/user','UserController@index')->name('userIndex');
+
+        Route::get('/user/create','UserController@create')->name('adminCreateUser');
+        Route::post('/user/create','UserController@store')->name('adminStoreUser');
         Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
         Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
         Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
 
         // user -post
-        Route::get('/user/post/','UserController@post')->name('postUser');
-        Route::post('/user/post/','PostController@store')->name('storePost');
 
         Route::get('/slide', 'SlideController@index')->name('Slide');
         Route::get('/slide/create', 'SlideController@create')->name('createSlide');
@@ -143,9 +161,14 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 
         //  POSTS - TAI ANH
         Route::get('/posts', 'PostController@viewPost')->name('viewPost');
+        Route::get('/post','UserController@post')->name('userPost');
+        Route::post('/post','PostController@store')->name('userStore');
         Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
         Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
         Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
+        Route::get('/trash-post', 'PostController@trash')->name('trashPost');
+        Route::get('/restore-post', 'PostController@restorePost')->name('restorePost');
+
 
         // admin/menu
         Route::get('/menu', 'MenuController@index')->name('menuIndex');
@@ -167,10 +190,5 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     
 });
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::prefix('/member')->group(function () {
-        Route::get('/index','UserController@indexMember')->name('userIndex');
 
-    });
-});
 
