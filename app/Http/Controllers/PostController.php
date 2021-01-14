@@ -226,6 +226,10 @@ class PostController extends Controller
             $user->notify(new PostNotification($data));
         };
 
+        $data['avatar'] = Auth::user()->avatar;
+        $data['username'] = Auth::user()->username;
+        // dd($data);
+
         $options = array(
             'cluster' => 'ap1',
             'encrypted' => true

@@ -1020,7 +1020,7 @@
     // Enable pusher logging - don't include this in production
      Pusher.logToConsole = true;
 
-    var pusher = new Pusher('{{env('PUSHER_APP_KEY')}}', {
+    var pusher = new Pusher('9f08d9c0efa4ca8ec17f', {
         cluster: 'ap1',
         encrypted: true
     });
@@ -1036,11 +1036,12 @@
         <li class="list-item border bottom">
                                             <a href="javascript:;" class="media-hover p-15">
                                                 <div class="media-img">
-                                                    <div class="icon-avatar bg-info">
-                                                        <i class="ti-shopping-cart"></i>
-                                                    </div>
+                                                    <img src="/storage/img/users/`+data.avatar+`" alt="">
+
                                                 </div>
+           
                                                 <div class="info">
+                                                    <span class="title text-semibold">`+data.username+`</span>
                                                     <span class="title">
                                                         `+data.title+`
                                                     </span>
