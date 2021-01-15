@@ -111,7 +111,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'broker_images' =>'https://file4.batdongsan.com.vn/images/nophoto/broker-no-photo-500_285.jpg',
+            'broker_images' =>'https://awesome-academy.com/images/AWACA_Logo_sun-02.png',
             'name' => 'CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN AWESOME ACADEMY',
             'type' => '1',
             'address' => 'Tầng 11 Tòa nhà Handico Tower, đường Phạm Hùng, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội',
