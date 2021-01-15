@@ -14,7 +14,7 @@ class BuyerSellerController extends Controller
     public function index(Request $request) {
         if(Cache::has('buyer_seller_cache'.'page'.($request->get('page')))){
             // dd(Cache::get('buyer_seller_cache'.($request->get('page'))));
-            Cache::flush('buyer_seller_cache'.'page'.($request->get('page')));
+            // Cache::flush('buyer_seller_cache'.'page'.($request->get('page')));
             return Cache::get('buyer_seller_cache'.'page'.($request->get('page')));
 
         } else {
