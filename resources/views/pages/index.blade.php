@@ -3,6 +3,7 @@
 @section('title', 'Kênh thông tin bất động sản - Mua bán nhà đất số 1 Việt Nam')
 
 @section('style-libraries')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.home.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
     <link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
@@ -1499,7 +1500,6 @@
     @endsection
 
     @section('scripts')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
         <script src="/assets/js/app.min.js"></script>

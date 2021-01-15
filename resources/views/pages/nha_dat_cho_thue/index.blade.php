@@ -301,12 +301,19 @@
                 </div>
 
                 @endforeach
-
                 <div class="text-center">
-                    <div class="paginate">
-                        {{-- {{ $paginator->links() }} --}}
+                    <div class="paginate" name="paginate">
+                        <ul class="pagination">
+                            <li><a href="?pageno=1">First</a></li>
+                            <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                                <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+                            </li>
+                            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                                <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+                            </li>
+                            <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                        </ul>
                     </div>
-
                 </div>
             </div>
 
@@ -438,7 +445,6 @@
     @section('scripts')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-
         $(document).ready(function() {
             $('.filter-nha-dat').click(function() {
                 $(this).addClass('actived').siblings().removeClass('actived');
